@@ -93,6 +93,26 @@
     });
   });
 
+  const toolCards = document.querySelectorAll('.tool-grid .tool-card');
+  const budgetCard = toolCards[1];
+  if (budgetCard) {
+    const badge = budgetCard.querySelector('.coming');
+    const title = budgetCard.querySelector('h3');
+    const description = budgetCard.querySelector('p');
+
+    if (badge) badge.textContent = 'Free';
+    if (title) title.textContent = 'Maintenance Budget Planner';
+    if (description) description.textContent = 'Turn your own routine, project, and emergency-reserve assumptions into a clear monthly contribution.';
+
+    if (!budgetCard.querySelector('a')) {
+      const link = document.createElement('a');
+      link.className = 'text-link';
+      link.href = 'maintenance-budget.html';
+      link.textContent = 'Open the free planner →';
+      budgetCard.appendChild(link);
+    }
+  }
+
   const checklist = document.querySelector('#interactive-list');
   const progressText = document.querySelector('#checklist-progress-text');
   const progressBar = document.querySelector('#checklist-progress-bar');
