@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Printable First 30 Days Homeowner Checklist | Home Routine Guide</title>
+  <meta name="description" content="A printable 30-day homeowner checklist for safety, shutoffs, home records, maintenance, and repair planning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root { --paper: #fff; --soft: #f6f1e7; --rule: #cfd8d2; }
+    body { background: var(--cream); }
+    .print-toolbar { padding: 18px 0; border-bottom: 1px solid var(--line); background: white; position: sticky; top: 0; z-index: 10; }
+    .print-toolbar .container { display: flex; justify-content: space-between; align-items: center; gap: 18px; }
+    .print-toolbar p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .print-sheet { width: min(920px, calc(100% - 32px)); margin: 36px auto; padding: 54px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 20px 55px rgba(23,53,45,.09); }
+    .print-head { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: start; padding-bottom: 28px; border-bottom: 2px solid var(--forest); }
+    .print-head h1 { font-size: clamp(2.7rem, 6vw, 4.7rem); margin: 4px 0 12px; }
+    .print-head p { color: var(--muted); max-width: 660px; margin: 0; }
+    .print-mark { width: 80px; height: 80px; border-radius: 22px; background: var(--forest); color: white; display: grid; place-items: center; font-family: "Newsreader", Georgia, serif; font-size: 2.2rem; }
+    .identity-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 28px 0; }
+    .write-line { border-bottom: 1px solid var(--rule); min-height: 34px; padding-top: 10px; color: var(--muted); font-size: .82rem; }
+    .section-block { margin-top: 38px; break-inside: avoid; }
+    .section-title { display: flex; justify-content: space-between; gap: 16px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+    .section-title h2 { font-size: 2rem; margin: 0; }
+    .section-title span { color: var(--rust); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+    .check-grid { display: grid; gap: 0; margin-top: 10px; }
+    .check-item { display: grid; grid-template-columns: 24px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid #e7ebe8; break-inside: avoid; }
+    .box { width: 18px; height: 18px; border: 1.5px solid var(--forest); border-radius: 4px; margin-top: 2px; }
+    .check-item strong { display: block; margin-bottom: 3px; }
+    .check-item p { color: var(--muted); margin: 0; font-size: .92rem; }
+    .record-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 18px; }
+    .record-card { border: 1px solid var(--rule); border-radius: 14px; padding: 18px; break-inside: avoid; }
+    .record-card h3 { margin: 0 0 10px; font-size: 1.05rem; }
+    .record-card .write-line { margin-top: 8px; }
+    .notes-area { min-height: 150px; margin-top: 18px; border: 1px solid var(--rule); border-radius: 14px; background: repeating-linear-gradient(to bottom, white 0, white 31px, #e7ebe8 32px); }
+    .safety-note { margin-top: 34px; padding: 18px 20px; border-left: 4px solid var(--gold); background: var(--soft); color: #445b53; }
+    .print-footer { margin-top: 36px; padding-top: 18px; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 20px; color: var(--muted); font-size: .78rem; }
+    @media (max-width: 700px) {
+      .print-sheet { padding: 30px 22px; margin-top: 18px; }
+      .print-head, .identity-row, .record-grid { grid-template-columns: 1fr; }
+      .print-mark { display: none; }
+      .print-toolbar .container { align-items: flex-start; flex-direction: column; }
+    }
+    @media print {
+      @page { size: letter; margin: .42in; }
+      body { background: white; color: #111; }
+      .print-toolbar { display: none; }
+      .print-sheet { width: auto; margin: 0; padding: 0; border: 0; box-shadow: none; }
+      .section-block { break-inside: avoid-page; }
+      .print-head h1 { font-size: 34pt; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="print-toolbar">
+    <div class="container">
+      <p>Subscriber resource · Print this page or choose “Save as PDF” in your browser’s print window.</p>
+      <button class="button button-primary" type="button" onclick="window.print()">Print or save PDF</button>
+    </div>
+  </div>
+
+  <main class="print-sheet">
+    <header class="print-head">
+      <div>
+        <p class="eyebrow">Home Routine Guide</p>
+        <h1>First 30 Days Homeowner Checklist</h1>
+        <p>A calm, prioritized plan for learning your home, handling the safety basics, organizing essential records, and building a routine you can maintain.</p>
+      </div>
+      <div class="print-mark" aria-hidden="true">⌂</div>
+    </header>
+
+    <div class="identity-row">
+      <div class="write-line">Home address</div>
+      <div class="write-line">Move-in date</div>
+    </div>
+
+    <section class="section-block">
+      <div class="section-title"><h2>Days 1-2</h2><span>Safety and control</span></div>
+      <div class="check-grid">
+        <div class="check-item"><span class="box"></span><div><strong>Secure exterior doors and access codes</strong><p>Rekey or replace locks as appropriate and update garage, gate, alarm, or smart-lock access.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Locate the main water shutoff</strong><p>Confirm it is accessible. Do not force a valve that appears damaged or stuck.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Locate the electrical panel</strong><p>Identify the main disconnect and note unclear, damaged, warm, buzzing, or unsafe conditions for a qualified electrician.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Learn the correct gas emergency procedure</strong><p>Follow your utility’s instructions. Never guess at unfamiliar fuel controls or remain inside when gas is suspected.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Test smoke and carbon-monoxide alarms</strong><p>Use each unit’s test control and review its label, manufacture date, power source, and instructions.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Check fire extinguishers</strong><p>Confirm they are visible, accessible, undamaged, and appropriate for their location.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title"><h2>Week 1</h2><span>Learn the systems</span></div>
+      <div class="check-grid">
+        <div class="check-item"><span class="box"></span><div><strong>Photograph equipment labels</strong><p>Capture model, serial, installation, fuel, voltage, filter, and warranty information where visible.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Check the HVAC filter</strong><p>Record the size and condition. Follow the equipment maker’s replacement guidance.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Inspect visible plumbing areas</strong><p>Look under sinks and around toilets, appliances, water heaters, and accessible supply lines for moisture or corrosion.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Find exterior and appliance shutoffs</strong><p>Identify accessible fixture, toilet, washer, dishwasher, refrigerator, and outdoor-water controls where present.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Walk the exterior in daylight</strong><p>Document drainage, gutters, roof edges visible from the ground, vents, steps, railings, trees, and new or changing damage.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title"><h2>Week 2</h2><span>Build the records</span></div>
+      <div class="check-grid">
+        <div class="check-item"><span class="box"></span><div><strong>Save the inspection and closing records</strong><p>Keep the inspection, disclosures, survey, warranties, permits, insurance documents, and important receipts together.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Start a home systems inventory</strong><p>List major equipment, approximate age, service company, last service date, warranty, and filter or consumable sizes.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Create a contractor and utility contact list</strong><p>Record verified utility numbers and qualified local professionals before an urgent problem occurs.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Review insurance contacts and deductible</strong><p>Know where to find the policy, claims number, inventory documentation, and temporary-loss instructions.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title"><h2>Weeks 3-4</h2><span>Plan the routine</span></div>
+      <div class="check-grid">
+        <div class="check-item"><span class="box"></span><div><strong>Choose a monthly home walk-through date</strong><p>Use the same short route each month to notice leaks, odors, noise, damage, filter condition, and safety-device issues.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Build the seasonal list</strong><p>Adapt tasks to your climate, property type, equipment, association responsibilities, and manufacturer instructions.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Prioritize inspection findings</strong><p>Separate urgent safety issues, near-term repairs, routine maintenance, and optional improvements.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Start a home maintenance fund</strong><p>Use known project estimates, recurring care, insurance deductibles, and your own financial circumstances.</p></div></div>
+        <div class="check-item"><span class="box"></span><div><strong>Schedule qualified help where needed</strong><p>Do not use a general checklist to diagnose electrical, gas, structural, roofing, sewage, hazardous-material, or significant water-intrusion problems.</p></div></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title"><h2>Emergency information</h2><span>Keep accessible</span></div>
+      <div class="record-grid">
+        <div class="record-card"><h3>Main water shutoff</h3><div class="write-line">Location</div><div class="write-line">Notes</div></div>
+        <div class="record-card"><h3>Electrical panel</h3><div class="write-line">Location</div><div class="write-line">Main disconnect notes</div></div>
+        <div class="record-card"><h3>Gas utility</h3><div class="write-line">Emergency number</div><div class="write-line">Utility instructions stored at</div></div>
+        <div class="record-card"><h3>Insurance</h3><div class="write-line">Carrier and policy</div><div class="write-line">Claims number</div></div>
+        <div class="record-card"><h3>Trusted plumber</h3><div class="write-line">Company and phone</div><div class="write-line">License or verification notes</div></div>
+        <div class="record-card"><h3>Trusted electrician</h3><div class="write-line">Company and phone</div><div class="write-line">License or verification notes</div></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title"><h2>Home systems snapshot</h2><span>Update over time</span></div>
+      <div class="record-grid">
+        <div class="record-card"><h3>Heating system</h3><div class="write-line">Type / model</div><div class="write-line">Age / service date</div><div class="write-line">Filter / notes</div></div>
+        <div class="record-card"><h3>Cooling system</h3><div class="write-line">Type / model</div><div class="write-line">Age / service date</div><div class="write-line">Filter / notes</div></div>
+        <div class="record-card"><h3>Water heater</h3><div class="write-line">Type / model</div><div class="write-line">Age / service date</div><div class="write-line">Location / notes</div></div>
+        <div class="record-card"><h3>Roof</h3><div class="write-line">Material / age</div><div class="write-line">Warranty / contractor</div><div class="write-line">Notes</div></div>
+      </div>
+    </section>
+
+    <section class="section-block">
+      <div class="section-title"><h2>Priority notes</h2><span>What needs attention next?</span></div>
+      <div class="notes-area" aria-label="Lined notes area"></div>
+    </section>
+
+    <div class="safety-note"><strong>Important:</strong> This checklist is educational and cannot inspect your property. Follow current manufacturer instructions, utility guidance, local requirements, and qualified professional advice. For an immediate threat, leave the area when appropriate and contact emergency services or the responsible utility.</div>
+
+    <footer class="print-footer">
+      <span>Home Routine Guide · homeroutineguide.com</span>
+      <span>Questions: info@homeroutineguide.com</span>
+    </footer>
+  </main>
+</body>
+</html>
