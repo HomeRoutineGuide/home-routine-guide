@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contractor Quote Comparison Tool | Home Routine Guide</title>
+  <meta name="description" content="Compare three contractor estimates by price, scope, materials, permits, insurance, schedule, warranty, cleanup, and payment terms without automatically choosing the lowest bid." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://homeroutineguide.com/contractor-quote-comparison.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="article.css" />
+  <link rel="stylesheet" href="tools.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span class="roof"></span><span class="door"></span></span><span>Home Routine Guide</span></a><nav aria-label="Primary navigation"><button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button><div class="site-menu" id="site-menu"><a href="first-30-days.html">First 30 Days</a><a href="maintenance-budget.html">Budget Planner</a><a href="water-leak-guide.html">Water Leaks</a><a href="contact.html">Contact</a></div></nav></div></header>
+
+  <main id="main">
+    <section class="article-hero tool-hero"><div class="container article-hero-inner"><div><p class="eyebrow">Free planning tool</p><h1>Contractor quote comparison</h1><p class="article-deck">Compare three written estimates across price, scope, materials, schedule, permits, insurance, warranty, and payment terms. The tool highlights missing information but never declares a contractor “best.”</p><div class="article-meta"><span>No account</span><span>Inputs stay in this browser session</span><span>Not a contractor-verification service</span></div></div><aside class="article-summary"><strong>Before you begin</strong><p>Use written estimates for the same project scope. A price comparison is misleading when contractors are proposing different work, materials, or exclusions.</p></aside></div></section>
+
+    <section class="article-section"><div class="container">
+      <form id="quote-form">
+        <div class="quote-grid">
+          <section class="quote-card" data-quote="a">
+            <p class="eyebrow">Estimate A</p><h2>Contractor A</h2>
+            <label>Contractor or company name<input type="text" name="a-name" placeholder="Company name" /></label>
+            <label>Total quoted price<div class="money-field"><span>$</span><input type="number" min="0" step="100" name="a-price" inputmode="decimal" placeholder="0" /></div></label>
+            <label>Requested deposit<div class="percent-field"><input type="number" min="0" max="100" step="1" name="a-deposit" inputmode="decimal" placeholder="0" /><span>%</span></div></label>
+            <label>Estimated project duration<input type="text" name="a-duration" placeholder="Example: 3–5 days" /></label>
+            <fieldset><legend>Written estimate includes</legend>
+              <label class="check-row"><input type="checkbox" name="a-check" value="license" />License status checked where required</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="insurance" />Proof of insurance requested</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="scope" />Detailed scope and exclusions</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="materials" />Materials, models, or allowances</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="permits" />Permit responsibility identified</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="schedule" />Start and completion expectations</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="payment" />Payment schedule in writing</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="changes" />Change-order process in writing</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="cleanup" />Cleanup and disposal included</label>
+              <label class="check-row"><input type="checkbox" name="a-check" value="warranty" />Labor and material warranty terms</label>
+            </fieldset>
+            <label>Notes<textarea name="a-notes" rows="4" placeholder="Questions, exclusions, references, financing, or concerns"></textarea></label>
+          </section>
+
+          <section class="quote-card" data-quote="b">
+            <p class="eyebrow">Estimate B</p><h2>Contractor B</h2>
+            <label>Contractor or company name<input type="text" name="b-name" placeholder="Company name" /></label>
+            <label>Total quoted price<div class="money-field"><span>$</span><input type="number" min="0" step="100" name="b-price" inputmode="decimal" placeholder="0" /></div></label>
+            <label>Requested deposit<div class="percent-field"><input type="number" min="0" max="100" step="1" name="b-deposit" inputmode="decimal" placeholder="0" /><span>%</span></div></label>
+            <label>Estimated project duration<input type="text" name="b-duration" placeholder="Example: 3–5 days" /></label>
+            <fieldset><legend>Written estimate includes</legend>
+              <label class="check-row"><input type="checkbox" name="b-check" value="license" />License status checked where required</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="insurance" />Proof of insurance requested</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="scope" />Detailed scope and exclusions</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="materials" />Materials, models, or allowances</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="permits" />Permit responsibility identified</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="schedule" />Start and completion expectations</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="payment" />Payment schedule in writing</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="changes" />Change-order process in writing</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="cleanup" />Cleanup and disposal included</label>
+              <label class="check-row"><input type="checkbox" name="b-check" value="warranty" />Labor and material warranty terms</label>
+            </fieldset>
+            <label>Notes<textarea name="b-notes" rows="4" placeholder="Questions, exclusions, references, financing, or concerns"></textarea></label>
+          </section>
+
+          <section class="quote-card" data-quote="c">
+            <p class="eyebrow">Estimate C</p><h2>Contractor C</h2>
+            <label>Contractor or company name<input type="text" name="c-name" placeholder="Company name" /></label>
+            <label>Total quoted price<div class="money-field"><span>$</span><input type="number" min="0" step="100" name="c-price" inputmode="decimal" placeholder="0" /></div></label>
+            <label>Requested deposit<div class="percent-field"><input type="number" min="0" max="100" step="1" name="c-deposit" inputmode="decimal" placeholder="0" /><span>%</span></div></label>
+            <label>Estimated project duration<input type="text" name="c-duration" placeholder="Example: 3–5 days" /></label>
+            <fieldset><legend>Written estimate includes</legend>
+              <label class="check-row"><input type="checkbox" name="c-check" value="license" />License status checked where required</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="insurance" />Proof of insurance requested</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="scope" />Detailed scope and exclusions</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="materials" />Materials, models, or allowances</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="permits" />Permit responsibility identified</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="schedule" />Start and completion expectations</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="payment" />Payment schedule in writing</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="changes" />Change-order process in writing</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="cleanup" />Cleanup and disposal included</label>
+              <label class="check-row"><input type="checkbox" name="c-check" value="warranty" />Labor and material warranty terms</label>
+            </fieldset>
+            <label>Notes<textarea name="c-notes" rows="4" placeholder="Questions, exclusions, references, financing, or concerns"></textarea></label>
+          </section>
+        </div>
+
+        <div class="calculator-actions quote-actions"><button class="button button-primary" type="submit">Compare estimates</button><button class="button button-reset" id="quote-reset" type="button">Clear tool</button><button class="button button-reset" type="button" onclick="window.print()">Print or save PDF</button></div>
+      </form>
+
+      <section class="quote-results" id="quote-results" aria-live="polite" hidden>
+        <div class="section-heading"><p class="eyebrow">Comparison summary</p><h2>Questions to resolve before signing</h2><p id="quote-overview"></p></div>
+        <div class="result-grid" id="result-grid"></div>
+        <div class="callout"><strong>This tool does not verify a contractor</strong><p>Confirm licensing requirements and status with the relevant state or local agency, request current insurance evidence, check references and complaint history, read the full contract, and understand local cancellation and deposit rules. Requirements vary by location.</p></div>
+      </section>
+
+      <article class="article-body policy-body quote-guidance">
+        <h2>How to compare written estimates</h2>
+        <p>The Federal Trade Commission recommends getting multiple written estimates and checking that they describe the work, materials, completion timing, and price. A major price difference deserves an explanation; it may reflect a different scope, material allowance, crew, permit assumption, warranty, or exclusion.</p>
+        <p>Do not automatically select the lowest price. Compare the underlying work, verify credentials where required, and avoid pressure to make an immediate decision or pay the full project price upfront. State rules about deposits, licensing, cancellation, and contract language vary.</p>
+        <ul class="source-list"><li><a href="https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam" target="_blank" rel="noopener noreferrer">Federal Trade Commission: How to Avoid a Home Improvement Scam</a></li></ul>
+        <p class="review-note"><strong>Privacy:</strong> This tool runs in your browser and does not intentionally transmit the entered quote information to Home Routine Guide. Printing behavior is controlled by your browser. Do not enter account numbers, signatures, or other sensitive records.</p>
+      </article>
+    </div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span class="roof"></span><span class="door"></span></span><span>Home Routine Guide</span></a><p>Know what your home needs next.</p><p><a href="mailto:info@homeroutineguide.com">info@homeroutineguide.com</a></p></div><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="editorial-policy.html">Editorial Policy</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></div></div><div class="container footer-bottom"><p>© <span id="year"></span> Home Routine Guide.</p><p>Educational information only. Follow manufacturer instructions, local codes, and qualified professional advice.</p></div></footer>
+  <script src="script.js"></script>
+  <script src="quotes.js"></script>
+</body>
+</html>
