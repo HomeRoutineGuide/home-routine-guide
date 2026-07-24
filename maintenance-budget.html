@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Maintenance Budget Planner | Home Routine Guide</title>
+  <meta name="description" content="Build a monthly home maintenance contribution from your own annual routine target, known projects, and emergency reserve—without relying on a universal percentage rule." />
+  <link rel="canonical" href="https://homeroutineguide.com/maintenance-budget.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="article.css" />
+  <link rel="stylesheet" href="tools.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span class="roof"></span><span class="door"></span></span><span>Home Routine Guide</span></a><nav aria-label="Primary navigation"><button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button><div class="site-menu" id="site-menu"><a href="first-30-days.html">First 30 Days</a><a href="seasonal-maintenance.html">Seasonal Routines</a><a href="about.html">About</a><a href="editorial-policy.html">Editorial Policy</a></div></nav></div></header>
+
+  <main id="main">
+    <section class="article-hero tool-hero">
+      <div class="container article-hero-inner">
+        <div><p class="eyebrow">Free planning tool</p><h1>Home maintenance budget planner</h1><p class="article-deck">Turn your own estimates into a monthly contribution. This tool does not tell you what your home “should” cost—it simply organizes the amounts you choose.</p><div class="article-meta"><span>No account</span><span>No data sent to us</span><span>Educational estimate</span></div></div>
+        <aside class="article-summary"><strong>Why this approach</strong><p>Home costs vary too much for one universal rule. Climate, condition, systems, labor prices, insurance, and owner choices all matter.</p></aside>
+      </div>
+    </section>
+
+    <section class="article-section">
+      <div class="container">
+        <div class="calculator-shell">
+          <form class="calculator-card" id="budget-form">
+            <p class="eyebrow">Your assumptions</p>
+            <h2>Build the monthly amount</h2>
+            <div class="field-grid">
+              <div class="field-group">
+                <label for="routine-annual">Annual routine maintenance target</label>
+                <div class="money-field"><span>$</span><input id="routine-annual" name="routineAnnual" type="number" min="0" step="50" value="1200" inputmode="decimal" /></div>
+                <small>Examples: filters, inspections, seasonal service, small supplies, and recurring care.</small>
+              </div>
+              <div class="field-group">
+                <label for="project-cost">Known future project cost</label>
+                <div class="money-field"><span>$</span><input id="project-cost" name="projectCost" type="number" min="0" step="100" value="3000" inputmode="decimal" /></div>
+                <small>Use a current estimate when possible. Enter zero when you are not funding a known project.</small>
+              </div>
+              <div class="field-group">
+                <label for="project-months">Months until the project</label>
+                <input id="project-months" name="projectMonths" type="number" min="1" max="240" step="1" value="24" inputmode="numeric" />
+                <small>This divides the known project cost across your chosen timeline.</small>
+              </div>
+              <div class="field-group">
+                <label for="reserve-annual">Annual emergency-reserve contribution</label>
+                <div class="money-field"><span>$</span><input id="reserve-annual" name="reserveAnnual" type="number" min="0" step="100" value="1200" inputmode="decimal" /></div>
+                <small>This is the amount you choose to add to a broader repair reserve during the year.</small>
+              </div>
+            </div>
+            <div class="calculator-actions">
+              <button class="button button-primary" type="submit">Update plan</button>
+              <button class="button button-reset" id="budget-reset" type="button">Reset example</button>
+            </div>
+          </form>
+
+          <aside class="result-card" aria-live="polite">
+            <p class="eyebrow light">Estimated contribution</p>
+            <h2>Your monthly home fund</h2>
+            <div class="result-total"><strong id="monthly-total">$325</strong><span>per month</span></div>
+            <ul class="breakdown-list">
+              <li><span>Routine maintenance</span><strong id="routine-monthly">$100</strong></li>
+              <li><span>Known project</span><strong id="project-monthly">$125</strong></li>
+              <li><span>Emergency reserve</span><strong id="reserve-monthly">$100</strong></li>
+            </ul>
+            <p><small>This is arithmetic based on your inputs, not a prediction or financial recommendation.</small></p>
+          </aside>
+        </div>
+
+        <div class="tool-notes">
+          <article class="tool-note"><h3>Start with known facts</h3><p>Use inspection findings, equipment age, recent contractor estimates, service schedules, and insurance deductibles to improve your assumptions.</p></article>
+          <article class="tool-note"><h3>Review quarterly</h3><p>Update the plan when work is completed, estimates change, or a new priority appears. A budget should adapt to the home.</p></article>
+          <article class="tool-note"><h3>Keep categories separate</h3><p>Routine care, known projects, and unexpected repairs are different needs. Seeing the breakdown makes tradeoffs clearer.</p></article>
+        </div>
+
+        <article class="article-body policy-body">
+          <h2>Why we avoid the universal percentage rule</h2>
+          <p>Rules based on a home’s purchase price can be convenient, but price does not directly measure roof condition, mechanical age, climate exposure, local labor cost, construction complexity, or whether a large repair is already known. A newly renovated high-cost condo and an older lower-cost detached home may have very different maintenance needs.</p>
+          <p>The Consumer Financial Protection Bureau advises buyers to include maintenance, repairs, utilities, and emergency savings in the broader cost of homeownership. It also notes that costs vary with local rates, climate, size, building code, and energy efficiency.</p>
+          <ul class="source-list"><li><a href="https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/" target="_blank" rel="noopener noreferrer">Consumer Financial Protection Bureau: budget for the full cost of homeownership</a></li></ul>
+          <p class="review-note"><strong>Privacy:</strong> Calculations run in your browser. This page does not intentionally send the entered amounts to Home Routine Guide. See our <a href="privacy.html">privacy policy</a> and <a href="disclaimer.html">disclaimer</a>.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span class="roof"></span><span class="door"></span></span><span>Home Routine Guide</span></a><p>Know what your home needs next.</p></div><div class="footer-links"><a href="about.html">About</a><a href="editorial-policy.html">Editorial Policy</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a></div></div><div class="container footer-bottom"><p>© <span id="year"></span> Home Routine Guide.</p><p>Educational information only. Follow manufacturer instructions, local codes, and qualified professional advice.</p></div></footer>
+  <script src="script.js"></script>
+  <script src="budget.js"></script>
+</body>
+</html>
