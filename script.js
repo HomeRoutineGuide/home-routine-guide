@@ -170,6 +170,93 @@
     updateProgress();
   }
 
+  const kitForm = {
+    uid: '4f903c7d6d',
+    src: 'https://home-routine-guide.kit.com/4f903c7d6d/index.js',
+    hostedUrl: 'https://home-routine-guide.kit.com/4f903c7d6d'
+  };
+
+  const addNewsletterStyles = () => {
+    if (document.querySelector('link[href="newsletter.css"]')) return;
+    const styles = document.createElement('link');
+    styles.rel = 'stylesheet';
+    styles.href = 'newsletter.css';
+    document.head.appendChild(styles);
+  };
+
+  const mountKitForm = (container) => {
+    if (!container || container.dataset.kitMounted === 'true') return;
+    container.dataset.kitMounted = 'true';
+
+    const script = document.createElement('script');
+    script.async = true;
+    script.dataset.uid = kitForm.uid;
+    script.src = kitForm.src;
+    container.appendChild(script);
+  };
+
+  const formShellMarkup = `
+    <div class="newsletter-form-shell">
+      <div class="kit-form-mount" aria-label="Email newsletter signup"></div>
+      <p class="newsletter-fallback">Form not appearing? <a href="${kitForm.hostedUrl}" target="_blank" rel="noopener noreferrer">Open the secure Kit signup form</a>.</p>
+      <p class="newsletter-privacy">By subscribing, you agree to receive Home Routine Guide emails. Unsubscribe anytime. See our <a href="privacy.html">privacy policy</a>.</p>
+    </div>
+  `;
+
+  const launchCard = document.querySelector('#launch .launch-card');
+  if (launchCard) {
+    addNewsletterStyles();
+    launchCard.classList.add('newsletter-card');
+    launchCard.innerHTML = `
+      <div class="newsletter-copy">
+        <p class="eyebrow">Free homeowner checklist</p>
+        <h2>Start your first 30 days with a plan.</h2>
+        <p>Join the Home Routine Guide newsletter and get the First 30 Days Homeowner Checklist, plus calm maintenance guidance built for beginners.</p>
+        <ul class="newsletter-benefits">
+          <li>Prioritized move-in and safety tasks</li>
+          <li>Practical seasonal reminders</li>
+          <li>No scare tactics or daily spam</li>
+        </ul>
+      </div>
+      ${formShellMarkup}
+    `;
+    mountKitForm(launchCard.querySelector('.kit-form-mount'));
+  } else {
+    const pathname = window.location.pathname.split('/').pop() || 'index.html';
+    const guidePages = new Set([
+      'first-30-days.html',
+      'seasonal-maintenance.html',
+      'water-leak-guide.html',
+      'smoke-co-alarm-guide.html'
+    ]);
+    const main = document.querySelector('main');
+
+    if (main && guidePages.has(pathname)) {
+      addNewsletterStyles();
+      const section = document.createElement('section');
+      section.className = 'newsletter-section';
+      section.innerHTML = `
+        <div class="container">
+          <div class="newsletter-card">
+            <div class="newsletter-copy">
+              <p class="eyebrow">Free homeowner checklist</p>
+              <h2>Build a home routine you can keep.</h2>
+              <p>Get the First 30 Days Homeowner Checklist and occasional practical guidance for maintaining, organizing, and protecting your home.</p>
+              <ul class="newsletter-benefits">
+                <li>Beginner-friendly priorities</li>
+                <li>Seasonal maintenance guidance</li>
+                <li>One-click unsubscribe</li>
+              </ul>
+            </div>
+            ${formShellMarkup}
+          </div>
+        </div>
+      `;
+      main.appendChild(section);
+      mountKitForm(section.querySelector('.kit-form-mount'));
+    }
+  }
+
   const year = document.querySelector('#year');
   if (year) year.textContent = String(new Date().getFullYear());
 })();
