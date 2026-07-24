@@ -1,6 +1,13 @@
 (() => {
   'use strict';
 
+  if (document.querySelector('.article-hero') && !document.querySelector('link[href="article.css"]')) {
+    const articleStyles = document.createElement('link');
+    articleStyles.rel = 'stylesheet';
+    articleStyles.href = 'article.css';
+    document.head.appendChild(articleStyles);
+  }
+
   const storageKey = 'homeRoutineGuide.first30Days.v1';
 
   const seasons = {
