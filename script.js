@@ -172,7 +172,6 @@
 
   const kitForm = {
     uid: '4f903c7d6d',
-    src: 'https://home-routine-guide.kit.com/4f903c7d6d/index.js',
     hostedUrl: 'https://home-routine-guide.kit.com/4f903c7d6d'
   };
 
@@ -188,11 +187,13 @@
     if (!container || container.dataset.kitMounted === 'true') return;
     container.dataset.kitMounted = 'true';
 
-    const script = document.createElement('script');
-    script.async = true;
-    script.dataset.uid = kitForm.uid;
-    script.src = kitForm.src;
-    container.appendChild(script);
+    const frame = document.createElement('iframe');
+    frame.className = 'kit-form-frame';
+    frame.src = 'newsletter-embed.html?v=1';
+    frame.title = 'Subscribe to the Home Routine Guide newsletter';
+    frame.setAttribute('scrolling', 'no');
+    frame.setAttribute('loading', 'eager');
+    container.replaceChildren(frame);
   };
 
   const formShellMarkup = `
