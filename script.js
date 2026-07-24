@@ -8,6 +8,7 @@
     document.head.appendChild(articleStyles);
   }
 
+  const pathname = window.location.pathname.split('/').pop() || 'index.html';
   const storageKey = 'homeRoutineGuide.first30Days.v1';
 
   const seasons = {
@@ -53,17 +54,15 @@
     }
   };
 
-  const starterGuideSection = document.querySelector('.guide-section');
-  if (starterGuideSection && !starterGuideSection.id) starterGuideSection.id = 'starter-guide';
-
   const siteMenu = document.querySelector('.site-menu');
   if (siteMenu) {
     siteMenu.id = 'site-menu';
     siteMenu.innerHTML = `
       <a href="index.html#start">Start Here</a>
-      <a href="index.html#guides">Guides</a>
-      <a href="index.html#tools">Free Tools</a>
-      <a href="index.html#starter-guide">Starter Guide</a>
+      <a href="resources.html#checklists">Free Checklists</a>
+      <a href="resources.html#guides">Guides</a>
+      <a href="resources.html#tools">Free Tools</a>
+      <a href="packages.html">Packages</a>
       <a class="nav-cta" href="index.html#launch">Newsletter</a>
     `;
   }
@@ -187,7 +186,6 @@
   }
 
   const kitForm = {
-    uid: '4f903c7d6d',
     hostedUrl: 'https://home-routine-guide.kit.com/4f903c7d6d'
   };
 
@@ -223,23 +221,23 @@
   const launchCard = document.querySelector('#launch .launch-card');
   if (launchCard) {
     addNewsletterStyles();
+    const isPackagePage = pathname === 'packages.html';
     launchCard.classList.add('newsletter-card');
     launchCard.innerHTML = `
       <div class="newsletter-copy">
-        <p class="eyebrow">Free homeowner checklist</p>
-        <h2>Start your first 30 days with a plan.</h2>
-        <p>Join the Home Routine Guide newsletter and get the First 30 Days Homeowner Checklist, plus calm maintenance guidance built for beginners.</p>
+        <p class="eyebrow">${isPackagePage ? 'Product launch list' : 'Free homeowner checklist'}</p>
+        <h2>${isPackagePage ? 'Get the free checklist and hear when packages open.' : 'Start your first 30 days with a plan.'}</h2>
+        <p>${isPackagePage ? 'Join the newsletter for the printable First 30 Days workbook, practical homeowner guidance, and product-release updates.' : 'Join the Home Routine Guide newsletter and get the First 30 Days Homeowner Checklist, plus calm maintenance guidance built for beginners.'}</p>
         <ul class="newsletter-benefits">
-          <li>Prioritized move-in and safety tasks</li>
-          <li>Practical seasonal reminders</li>
-          <li>No scare tactics or daily spam</li>
+          <li>Printable First 30 Days workbook</li>
+          <li>Practical seasonal guidance</li>
+          <li>${isPackagePage ? 'Package launch announcements' : 'No scare tactics or daily spam'}</li>
         </ul>
       </div>
       ${formShellMarkup}
     `;
     mountKitForm(launchCard.querySelector('.kit-form-mount'));
   } else {
-    const pathname = window.location.pathname.split('/').pop() || 'index.html';
     const guidePages = new Set([
       'first-30-days.html',
       'seasonal-maintenance.html',
