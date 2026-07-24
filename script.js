@@ -53,10 +53,26 @@
     }
   };
 
+  const starterGuideSection = document.querySelector('.guide-section');
+  if (starterGuideSection && !starterGuideSection.id) starterGuideSection.id = 'starter-guide';
+
+  const siteMenu = document.querySelector('.site-menu');
+  if (siteMenu) {
+    siteMenu.id = 'site-menu';
+    siteMenu.innerHTML = `
+      <a href="index.html#start">Start Here</a>
+      <a href="index.html#guides">Guides</a>
+      <a href="index.html#tools">Free Tools</a>
+      <a href="index.html#starter-guide">Starter Guide</a>
+      <a class="nav-cta" href="index.html#launch">Newsletter</a>
+    `;
+  }
+
   const menuButton = document.querySelector('.menu-toggle');
   const menu = document.querySelector('#site-menu');
 
   if (menuButton && menu) {
+    menuButton.setAttribute('aria-controls', 'site-menu');
     menuButton.addEventListener('click', () => {
       const isOpen = menu.classList.toggle('open');
       menuButton.setAttribute('aria-expanded', String(isOpen));
