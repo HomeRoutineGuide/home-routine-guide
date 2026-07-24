@@ -35,18 +35,21 @@
   };
 
   const numberValue = (name) => {
-    const parsed = Number(value(name));
+    const raw = value(name);
+    if (raw === '') return null;
+    const parsed = Number(raw);
     return Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
   };
 
   const readQuote = (key, index) => {
     const checked = [...form.querySelectorAll(`input[name="${key}-check"]:checked`)].map((box) => box.value);
     const missing = Object.keys(labels).filter((item) => !checked.includes(item));
+    const fallbackName = `Estimate ${String.fromCharCode(65 + index)}`;
 
     return {
       key,
-      fallbackName: `Estimate ${String.fromCharCode(65 + index)}`,
-      name: value(`${key}-name`) || `Estimate ${String.fromCharCode(65 + index)}`,
+      fallbackName,
+      name: value(`${key}-name`) || fallbackName,
       price: numberValue(`${key}-price`),
       deposit: numberValue(`${key}-deposit`),
       duration: value(`${key}-duration`) || 'Not entered',
@@ -93,6 +96,23 @@
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     const quotes = quoteKeys.map(readQuote);
+    const hasAnyEntry = quotes.some((quote) =>
+      quote.name !== quote.fallbackName ||
+      quote.price !== null ||
+      quote.deposit !== null ||
+      quote.duration !== 'Not entered' ||
+      quote.notes ||
+      quote.score > 0
+    );
+
+    if (!hasAnyEntry) {
+      results.hidden = false;
+      overview.textContent = 'Enter at least one estimate or mark documented fields before comparing.';
+      resultGrid.innerHTML = '';
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
     const pricedQuotes = quotes.filter((quote) => quote.price !== null && quote.price > 0);
     const highestScore = Math.max(...quotes.map((quote) => quote.score));
     const mostDocumented = quotes.filter((quote) => quote.score === highestScore).map((quote) => quote.name);
