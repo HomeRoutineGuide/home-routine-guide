@@ -242,7 +242,10 @@
       'first-30-days.html',
       'seasonal-maintenance.html',
       'water-leak-guide.html',
-      'smoke-co-alarm-guide.html'
+      'smoke-co-alarm-guide.html',
+      'where-is-main-water-shutoff.html',
+      'how-often-change-hvac-filter.html',
+      'monthly-home-maintenance-checklist.html'
     ]);
     const main = document.querySelector('main');
 
