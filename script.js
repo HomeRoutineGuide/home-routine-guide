@@ -10,6 +10,7 @@
 
   const pathname = window.location.pathname.split('/').pop() || 'index.html';
   const storageKey = 'homeRoutineGuide.first30Days.v1';
+  const starterCheckoutUrl = 'https://home-routine-guide.kit.com/products/19-starter-binder?step=checkout';
 
   const seasons = {
     spring: {
@@ -65,6 +66,14 @@
       <a href="packages.html">Packages</a>
       <a class="nav-cta" href="index.html#launch">Newsletter</a>
     `;
+  }
+
+  const footerLinks = document.querySelector('.footer-links');
+  if (footerLinks && !footerLinks.querySelector('a[href="digital-product-terms.html"]')) {
+    const termsLink = document.createElement('a');
+    termsLink.href = 'digital-product-terms.html';
+    termsLink.textContent = 'Digital Product Terms';
+    footerLinks.appendChild(termsLink);
   }
 
   const menuButton = document.querySelector('.menu-toggle');
@@ -197,6 +206,15 @@
     document.head.appendChild(styles);
   };
 
+  const addCommerceScript = () => {
+    if (document.querySelector('script[src="https://home-routine-guide.kit.com/commerce.js"]')) return;
+    const commerce = document.createElement('script');
+    commerce.src = 'https://home-routine-guide.kit.com/commerce.js';
+    commerce.async = true;
+    commerce.defer = true;
+    document.body.appendChild(commerce);
+  };
+
   const mountKitForm = (container) => {
     if (!container || container.dataset.kitMounted === 'true') return;
     container.dataset.kitMounted = 'true';
@@ -218,6 +236,50 @@
     </div>
   `;
 
+  const main = document.querySelector('main');
+  const starterPromoPages = new Set([
+    'resources.html',
+    'first-30-days.html',
+    'seasonal-maintenance.html',
+    'water-leak-guide.html',
+    'smoke-co-alarm-guide.html',
+    'where-is-main-water-shutoff.html',
+    'how-often-change-hvac-filter.html',
+    'monthly-home-maintenance-checklist.html',
+    'maintenance-budget.html',
+    'contractor-quote-comparison.html'
+  ]);
+
+  if (main && starterPromoPages.has(pathname) && !document.querySelector('.starter-product-section')) {
+    addNewsletterStyles();
+    addCommerceScript();
+    const productSection = document.createElement('section');
+    productSection.className = 'starter-product-section';
+    productSection.innerHTML = `
+      <div class="container">
+        <div class="starter-product-card">
+          <div>
+            <p class="eyebrow">New Homeowner Starter Binder</p>
+            <h2>Keep the essential home details in one printable system.</h2>
+            <p>The 27-page Starter Binder combines first-month priorities, emergency information, shutoff and equipment records, warranties, contractors, maintenance notes, and seasonal planning.</p>
+            <ul class="starter-product-benefits">
+              <li>One-time $19 digital purchase</li>
+              <li>Instant file delivery through Kit</li>
+              <li>No subscription required</li>
+            </ul>
+          </div>
+          <div class="starter-product-actions">
+            <a class="button button-primary convertkit-button" href="${starterCheckoutUrl}" data-commerce>Buy the Starter Binder — $19</a>
+            <a class="button button-secondary" href="packages.html">See everything included</a>
+          </div>
+        </div>
+      </div>
+    `;
+    const launchSection = document.querySelector('#launch');
+    if (launchSection) main.insertBefore(productSection, launchSection);
+    else main.appendChild(productSection);
+  }
+
   const launchCard = document.querySelector('#launch .launch-card');
   if (launchCard) {
     addNewsletterStyles();
@@ -225,31 +287,32 @@
     launchCard.classList.add('newsletter-card');
     launchCard.innerHTML = `
       <div class="newsletter-copy">
-        <p class="eyebrow">${isPackagePage ? 'Product launch list' : 'Free homeowner checklist'}</p>
-        <h2>${isPackagePage ? 'Get the free checklist and hear when packages open.' : 'Start your first 30 days with a plan.'}</h2>
-        <p>${isPackagePage ? 'Join the newsletter for the printable First 30 Days workbook, practical homeowner guidance, and product-release updates.' : 'Join the Home Routine Guide newsletter and get the First 30 Days Homeowner Checklist, plus calm maintenance guidance built for beginners.'}</p>
+        <p class="eyebrow">${isPackagePage ? 'Free checklist and future releases' : 'Free homeowner checklist'}</p>
+        <h2>${isPackagePage ? 'Get the free checklist and hear about the next binders.' : 'Start your first 30 days with a plan.'}</h2>
+        <p>${isPackagePage ? 'Join the newsletter for the printable First 30 Days workbook, practical homeowner guidance, and future product updates.' : 'Join the Home Routine Guide newsletter and get the First 30 Days Homeowner Checklist, plus calm maintenance guidance built for beginners.'}</p>
         <ul class="newsletter-benefits">
           <li>Printable First 30 Days workbook</li>
           <li>Practical seasonal guidance</li>
-          <li>${isPackagePage ? 'Package launch announcements' : 'No scare tactics or daily spam'}</li>
+          <li>${isPackagePage ? 'Future binder release announcements' : 'No scare tactics or daily spam'}</li>
         </ul>
       </div>
       ${formShellMarkup}
     `;
     mountKitForm(launchCard.querySelector('.kit-form-mount'));
   } else {
-    const guidePages = new Set([
+    const newsletterPages = new Set([
       'first-30-days.html',
       'seasonal-maintenance.html',
       'water-leak-guide.html',
       'smoke-co-alarm-guide.html',
       'where-is-main-water-shutoff.html',
       'how-often-change-hvac-filter.html',
-      'monthly-home-maintenance-checklist.html'
+      'monthly-home-maintenance-checklist.html',
+      'maintenance-budget.html',
+      'contractor-quote-comparison.html'
     ]);
-    const main = document.querySelector('main');
 
-    if (main && guidePages.has(pathname)) {
+    if (main && newsletterPages.has(pathname)) {
       addNewsletterStyles();
       const section = document.createElement('section');
       section.className = 'newsletter-section';
