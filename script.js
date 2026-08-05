@@ -207,12 +207,20 @@
   };
 
   const addCommerceScript = () => {
-    if (document.querySelector('script[src="https://home-routine-guide.kit.com/commerce.js"]')) return;
+    const commerceSrc = 'https://home-routine-guide.kit.com/commerce.js';
+    const existing = document.querySelector(`script[src="${commerceSrc}"]`);
+    if (existing) return existing;
+
     const commerce = document.createElement('script');
-    commerce.src = 'https://home-routine-guide.kit.com/commerce.js';
+    commerce.src = commerceSrc;
     commerce.async = true;
     commerce.defer = true;
+    commerce.dataset.homeRoutineKitCommerce = 'true';
+    commerce.addEventListener('error', () => {
+      commerce.remove();
+    }, { once: true });
     document.body.appendChild(commerce);
+    return commerce;
   };
 
   const mountKitForm = (container) => {
@@ -252,7 +260,6 @@
 
   if (main && starterPromoPages.has(pathname) && !document.querySelector('.starter-product-section')) {
     addNewsletterStyles();
-    addCommerceScript();
     const productSection = document.createElement('section');
     productSection.className = 'starter-product-section';
     productSection.innerHTML = `
@@ -278,6 +285,14 @@
     const launchSection = document.querySelector('#launch');
     if (launchSection) main.insertBefore(productSection, launchSection);
     else main.appendChild(productSection);
+
+    // Load Kit only after the exact data-commerce button exists in the page.
+    addCommerceScript();
+  }
+
+  // Static checkout buttons on the homepage and Packages page use the same embed.
+  if (document.querySelector('a.convertkit-button[data-commerce]')) {
+    addCommerceScript();
   }
 
   const launchCard = document.querySelector('#launch .launch-card');
