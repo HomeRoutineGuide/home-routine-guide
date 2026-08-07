@@ -43,12 +43,11 @@ Home Routine Guide is a practical homeowner education platform for first-time an
 - Search-focused cornerstone guides
 - Useful browser tools with no login
 
-### Phase 2 — first products
+### Phase 2 — first product
 
-- Home Routine Starter Guide
-- First-Year Maintenance Planner
-- Home Systems and Warranty Binder
-- Contractor Quote Comparison Kit
+- Focus the offer on the $19, 44-page New Homeowner Starter Binder
+- Use the free checklist and buyer-intent guides to lead into one clear paid product
+- Improve the binder and sales page from real subscriber and customer questions before adding another offer
 
 ### Phase 3 — careful affiliate revenue
 
@@ -70,7 +69,8 @@ Home Routine Guide is a practical homeowner education platform for first-time an
 - Configure the business email and public contact address
 - Select an email-service provider and publish the free lead magnet
 - Add a visible link to the budget planner from the homepage tool section
-- Create a home-profile onboarding tool
+- Build the free Kit welcome sequence around the First 30 Days checklist and Starter Binder
+- Create a repeatable no-face distribution system for buyer-intent articles
 - Create plumbing, HVAC, water-protection, electrical-safety, roof/drainage, and contractor cornerstone guides
 - Add structured article data, social images, favicons, and error page
 - Add privacy-respecting analytics only after updating the privacy policy
