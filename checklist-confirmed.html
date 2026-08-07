@@ -13,99 +13,43 @@
   <link rel="stylesheet" href="article.css" />
   <link rel="stylesheet" href="marketing.css" />
   <style>
-    .confirmation-product {
-      display: grid;
-      grid-template-columns: minmax(240px, .8fr) minmax(0, 1.2fr);
-      gap: 36px;
-      align-items: center;
-      margin: 54px 0;
-      padding: 34px;
-      border: 1px solid rgba(23, 53, 45, .15);
-      border-radius: 24px;
-      background: #f8f5ec;
-      box-shadow: 0 20px 48px rgba(23, 53, 45, .08);
-    }
-    .confirmation-product img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 18px;
-      border: 1px solid rgba(23, 53, 45, .12);
-    }
-    .confirmation-product h2 { margin-top: 8px; }
-    .confirmation-price { margin: 18px 0; font-weight: 700; color: var(--forest); }
-    .confirmation-price strong { font-size: 2rem; margin-right: 8px; }
-    .confirmation-product ul { padding-left: 20px; }
-    .confirmation-product .button { margin-top: 10px; }
-    @media (max-width: 760px) {
-      .confirmation-product { grid-template-columns: 1fr; padding: 24px; }
-    }
+    .confirmation-product {display:grid;grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);gap:36px;align-items:center;margin:54px 0;padding:34px;border:1px solid rgba(23,53,45,.15);border-radius:24px;background:#f8f5ec;box-shadow:0 20px 48px rgba(23,53,45,.08)}
+    .confirmation-product img {display:block;width:100%;height:auto;border-radius:18px;border:1px solid rgba(23,53,45,.12)}
+    .confirmation-product h2 {margin-top:8px}.confirmation-price{margin:18px 0;font-weight:700;color:var(--forest)}.confirmation-price strong{font-size:2rem;margin-right:8px}.confirmation-product ul{padding-left:20px}.confirmation-product .button{margin-top:10px}
+    @media(max-width:760px){.confirmation-product{grid-template-columns:1fr;padding:24px}}
   </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span class="roof"></span><span class="door"></span></span><span>Home Routine Guide</span></a>
-      <nav aria-label="Primary navigation"><button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button><div class="site-menu" id="site-menu"><a href="index.html#start">Start Here</a><a href="resources.html#checklists">Free Checklists</a><a href="resources.html#guides">Guides</a><a href="resources.html#tools">Free Tools</a><a href="packages.html">Packages</a></div></nav>
-    </div>
-  </header>
+  <header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span class="roof"></span><span class="door"></span></span><span>Home Routine Guide</span></a><nav aria-label="Primary navigation"><button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button><div class="site-menu" id="site-menu"><a href="index.html#start">Start Here</a><a href="resources.html#checklists">Free Checklists</a><a href="resources.html#guides">Guides</a><a href="resources.html#tools">Free Tools</a><a href="packages.html">Packages</a></div></nav></div></header>
 
   <main id="main">
-    <section class="article-hero policy-hero">
-      <div class="container article-hero-inner">
+    <section class="article-hero policy-hero"><div class="container article-hero-inner"><div><p class="eyebrow">Email confirmed</p><h1>Your printable checklist is ready.</h1><p class="article-deck">Print the workbook for shutoff locations, emergency contacts, equipment notes, and your 30-day plan—or continue with the interactive browser checklist.</p><div class="hero-actions"><a class="button button-primary" href="first-30-days-printable.html">Open the printable workbook</a><a class="button button-secondary" href="index.html#checklist">Use the interactive checklist</a></div></div></div></section>
+
+    <section class="article-section"><article class="container article-body policy-body">
+      <div class="callout callout-calm"><strong>Best first step</strong><p>Open the printable workbook and save a copy. Then begin with the main water shutoff, electrical panel, and smoke and carbon-monoxide alarms.</p></div>
+      <h2>Three ways to use the resource</h2>
+      <div class="value-grid"><div class="value-card"><h3>Print it</h3><p>Write in locations, contact numbers, equipment information, and priority notes.</p></div><div class="value-card"><h3>Save as a PDF</h3><p>Use your browser’s print window and select “Save as PDF” for a digital copy.</p></div><div class="value-card"><h3>Track online</h3><p>Use the interactive checklist when you want progress saved in your current browser.</p></div><div class="value-card"><h3>Read the details</h3><p>Open the complete guide when you need the reasoning, safety boundaries, and source links behind a task.</p></div></div>
+      <div class="resource-cta"><a class="button button-primary" href="first-30-days-printable.html">Open printable workbook</a><a class="button button-secondary" href="first-30-days.html">Read the complete guide</a></div>
+
+      <section class="confirmation-product" aria-labelledby="starter-binder-title">
+        <div><img src="new-homeowner-starter-binder.png" alt="New Homeowner Starter Binder product cover" width="1254" height="1254" loading="lazy" decoding="async" /></div>
         <div>
-          <p class="eyebrow">Email confirmed</p>
-          <h1>Your printable checklist is ready.</h1>
-          <p class="article-deck">Print the workbook for shutoff locations, emergency contacts, equipment notes, and your 30-day plan—or continue with the interactive browser checklist.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="first-30-days-printable.html">Open the printable workbook</a>
-            <a class="button button-secondary" href="index.html#checklist">Use the interactive checklist</a>
-          </div>
+          <p class="eyebrow">Optional next step · enhanced edition</p>
+          <h2 id="starter-binder-title">Turn the free checklist into a guided homeowner operating file.</h2>
+          <p>The free workbook handles the first 30 days. The enhanced Starter Binder adds specific prompts and examples for the information you will keep using afterward—home systems, equipment, warranties, repairs, service history, contractors, seasonal maintenance, budgets, and future projects.</p>
+          <div class="confirmation-price"><strong>$19</strong><span>one-time digital purchase</span></div>
+          <ul><li>44 guided printable pages</li><li>Clear “what to enter” prompts instead of generic blank forms</li><li>Repair, service, moisture, contractor, budget, and planning worksheets</li><li>Instant digital delivery through Kit</li><li>No subscription required</li></ul>
+          <a class="button button-primary convertkit-button" href="https://home-routine-guide.kit.com/products/19-starter-binder?step=checkout" data-commerce>Get the 44-Page Binder — $19</a>
+          <p><small>The free checklist remains yours whether or not you purchase. Review the <a href="digital-product-terms.html">digital product terms and refund policy</a>.</small></p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="article-section">
-      <article class="container article-body policy-body">
-        <div class="callout callout-calm"><strong>Best first step</strong><p>Open the printable workbook and save a copy. Then begin with the main water shutoff, electrical panel, and smoke and carbon-monoxide alarms.</p></div>
-
-        <h2>Three ways to use the resource</h2>
-        <div class="value-grid">
-          <div class="value-card"><h3>Print it</h3><p>Write in locations, contact numbers, equipment information, and priority notes.</p></div>
-          <div class="value-card"><h3>Save as a PDF</h3><p>Use your browser’s print window and select “Save as PDF” for a digital copy.</p></div>
-          <div class="value-card"><h3>Track online</h3><p>Use the interactive checklist when you want progress saved in your current browser.</p></div>
-          <div class="value-card"><h3>Read the details</h3><p>Open the complete guide when you need the reasoning, safety boundaries, and source links behind a task.</p></div>
-        </div>
-        <div class="resource-cta"><a class="button button-primary" href="first-30-days-printable.html">Open printable workbook</a><a class="button button-secondary" href="first-30-days.html">Read the complete guide</a></div>
-
-        <section class="confirmation-product" aria-labelledby="starter-binder-title">
-          <div><img src="new-homeowner-starter-binder.png" alt="New Homeowner Starter Binder digital product cover" width="1254" height="1254" loading="lazy" decoding="async" /></div>
-          <div>
-            <p class="eyebrow">Optional next step</p>
-            <h2 id="starter-binder-title">Turn the free checklist into a complete homeowner record system.</h2>
-            <p>The free workbook helps you through the first 30 days. The paid Starter Binder adds reusable pages for emergency details, home systems, equipment, warranties, contractors, maintenance notes, and seasonal planning.</p>
-            <div class="confirmation-price"><strong>$19</strong><span>one-time digital purchase</span></div>
-            <ul>
-              <li>27 printable pages</li>
-              <li>Instant digital delivery through Kit</li>
-              <li>No subscription required</li>
-              <li>Designed for a new homeowner’s essential records</li>
-            </ul>
-            <a class="button button-primary convertkit-button" href="https://home-routine-guide.kit.com/products/19-starter-binder?step=checkout" data-commerce>Get the Starter Binder — $19</a>
-            <p><small>The free checklist remains yours whether or not you purchase. Review the <a href="digital-product-terms.html">digital product terms and refund policy</a>.</small></p>
-          </div>
-        </section>
-
-        <h2>What happens next</h2>
-        <p>You may receive occasional Home Routine Guide emails with practical routines, new free resources, and product updates. Every marketing email includes an unsubscribe link.</p>
-        <p>For delivery problems or ordinary questions, contact <a href="mailto:info@homeroutineguide.com">info@homeroutineguide.com</a>. Home Routine Guide is not an emergency service.</p>
-      </article>
-    </section>
+      <h2>What happens next</h2><p>You may receive occasional Home Routine Guide emails with practical routines, new free resources, and product updates. Every marketing email includes an unsubscribe link.</p><p>For delivery problems or ordinary questions, contact <a href="mailto:info@homeroutineguide.com">info@homeroutineguide.com</a>. Home Routine Guide is not an emergency service.</p>
+    </article></section>
   </main>
 
   <footer class="site-footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><span class="roof"></span><span class="door"></span></span><span>Home Routine Guide</span></a><p>Know what your home needs next.</p><p><a href="mailto:info@homeroutineguide.com">info@homeroutineguide.com</a></p></div><div class="footer-links"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="editorial-policy.html">Editorial Policy</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a><a href="privacy.html">Privacy</a><a href="disclaimer.html">Disclaimer</a><a href="digital-product-terms.html">Digital Product Terms</a></div></div><div class="container footer-bottom"><p>© <span id="year"></span> Home Routine Guide.</p><p>Educational information only. Follow manufacturer instructions, local codes, and qualified professional advice.</p></div></footer>
-  <script src="https://home-routine-guide.kit.com/commerce.js" async defer></script>
-  <script src="script.js"></script>
+  <script src="https://home-routine-guide.kit.com/commerce.js" async defer></script><script src="script.js"></script>
 </body>
 </html>
