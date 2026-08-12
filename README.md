@@ -17,6 +17,7 @@ Home Routine Guide is a practical homeowner education platform for first-time an
 - Detailed First 30 Days homeowner guide
 - Detailed four-season maintenance guide
 - Home maintenance budget planner
+- Free appliance inventory, home project, and contractor contact worksheets
 - About page
 - Editorial and corrections policy
 - Affiliate and advertising disclosure

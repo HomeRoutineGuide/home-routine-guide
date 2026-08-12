@@ -175,6 +175,82 @@
 .value-card h3 { margin-top: 0; }
 .value-card p { margin-bottom: 0; }
 
+.printable-sheet {
+  margin: 34px 0 42px;
+  padding: 28px;
+  border: 2px solid var(--forest);
+  border-radius: var(--radius-md);
+  background: white;
+  box-shadow: 0 16px 42px rgba(23,53,45,.08);
+}
+
+.printable-sheet-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.printable-sheet-header h2,
+.printable-sheet-header h3 { margin: 0 0 6px; padding: 0; }
+.printable-sheet-header p { margin: 0; }
+
+.worksheet-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.worksheet-field {
+  display: grid;
+  gap: 7px;
+  color: var(--forest);
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.worksheet-field.full { grid-column: 1 / -1; }
+
+.worksheet-field input,
+.worksheet-field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid #9caf9f;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-weight: 400;
+}
+
+.worksheet-field textarea { min-height: 92px; resize: vertical; }
+
+.worksheet-table-wrap { overflow-x: auto; margin: 20px 0; }
+
+.worksheet-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: .82rem;
+}
+
+.worksheet-table th,
+.worksheet-table td {
+  min-width: 110px;
+  padding: 10px;
+  border: 1px solid #9caf9f;
+  text-align: left;
+  vertical-align: top;
+}
+
+.worksheet-table th { background: var(--sage); color: var(--forest); }
+.worksheet-table input { width: 100%; min-width: 90px; border: 0; background: transparent; font: inherit; }
+.worksheet-note { color: var(--muted); font-size: .84rem; }
+.print-button { flex: 0 0 auto; }
+
 @media (max-width: 900px) {
   .article-hero-inner,
   .article-layout { grid-template-columns: 1fr; gap: 38px; }
@@ -189,4 +265,32 @@
   .value-grid { grid-template-columns: 1fr; }
   .article-body h2 { margin-top: 52px; }
   .article-summary { padding: 22px; }
+  .printable-sheet { padding: 20px; }
+  .printable-sheet-header { display: grid; }
+  .worksheet-fields { grid-template-columns: 1fr; }
+  .worksheet-field.full { grid-column: auto; }
+}
+
+@media print {
+  body * { visibility: hidden !important; }
+  .printable-sheet,
+  .printable-sheet * { visibility: visible !important; }
+  .printable-sheet {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .print-button,
+  .worksheet-note { display: none !important; }
+  .worksheet-table-wrap { overflow: visible; }
+  .worksheet-table { min-width: 0; font-size: 9pt; }
+  .worksheet-table th,
+  .worksheet-table td { min-width: 0; height: 42px; padding: 6px; }
+  .worksheet-field input,
+  .worksheet-field textarea { border-color: #777; }
 }
