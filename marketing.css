@@ -64,6 +64,13 @@
 
 .offer-card p { color: var(--muted); }
 
+.checkout-transition-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.45;
+}
+
 .offer-list,
 .package-list,
 .resource-list {
