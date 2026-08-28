@@ -1,0 +1,91 @@
+name: Notify search engines with IndexNow
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**.html"
+      - "script.js"
+      - "sitemap.xml"
+      - "88e55da74b9c5eec9ef9652f5b1ac9c2.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the published source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Wait for the verification key to be public
+        run: >-
+          curl --fail --silent --show-error
+          --retry 12 --retry-delay 10 --retry-all-errors
+          https://homeroutineguide.com/88e55da74b9c5eec9ef9652f5b1ac9c2.txt
+
+      - name: Build the changed URL payload
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import subprocess
+          import xml.etree.ElementTree as ET
+
+          host = "homeroutineguide.com"
+          base = f"https://{host}/"
+          key = "88e55da74b9c5eec9ef9652f5b1ac9c2"
+          before = os.environ.get("BEFORE_SHA", "")
+          after = os.environ.get("AFTER_SHA", "HEAD")
+          full_refresh = not before or set(before) == {"0"}
+          changed = []
+
+          if not full_refresh:
+              result = subprocess.run(
+                  ["git", "diff", "--name-only", before, after],
+                  check=True,
+                  capture_output=True,
+                  text=True,
+              )
+              changed = [line.strip() for line in result.stdout.splitlines() if line.strip()]
+              full_refresh = "script.js" in changed or "sitemap.xml" in changed
+
+          if full_refresh:
+              root = ET.parse("sitemap.xml").getroot()
+              namespace = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+              urls = [node.text for node in root.findall("sm:url/sm:loc", namespace) if node.text]
+          else:
+              urls = []
+              for path in changed:
+                  if not path.endswith(".html"):
+                      continue
+                  urls.append(base if path == "index.html" else base + path)
+
+          payload = {
+              "host": host,
+              "key": key,
+              "keyLocation": base + key + ".txt",
+              "urlList": sorted(set(urls)),
+          }
+          with open("indexnow-payload.json", "w", encoding="utf-8") as handle:
+              json.dump(payload, handle, separators=(",", ":"))
+          print(f"Prepared {len(payload['urlList'])} URL(s) for IndexNow")
+          PY
+
+      - name: Submit changed URLs
+        run: |
+          if [ "$(python -c 'import json; print(len(json.load(open("indexnow-payload.json"))["urlList"]))')" -gt 0 ]; then
+            curl --fail-with-body --silent --show-error \
+              -H "Content-Type: application/json; charset=utf-8" \
+              --data-binary @indexnow-payload.json \
+              https://api.indexnow.org/indexnow
+          else
+            echo "No changed public HTML URLs to submit."
+          fi
