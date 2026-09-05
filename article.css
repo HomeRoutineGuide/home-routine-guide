@@ -340,3 +340,35 @@
   .worksheet-field input,
   .worksheet-field textarea { border-color: #777; }
 }
+
+/* Keep article anchor targets clear of the sticky navigation. */
+.article-body [id] { scroll-margin-top: 100px; }
+.maintenance-log-page #blank-log h2 { margin: 0 0 12px; padding: 0; font-size: 2rem; }
+.maintenance-log-page #blank-log td { height: 62px; }
+.maintenance-log-page #blank-log caption { text-align: left; margin-bottom: 12px; }
+.maintenance-log-page .worksheet-table-wrap:focus-visible { outline: 3px solid var(--forest); outline-offset: 4px; }
+
+@media print {
+  body.maintenance-log-page .site-header,
+  body.maintenance-log-page .site-footer,
+  body.maintenance-log-page main > :not(.article-section),
+  body.maintenance-log-page .article-section > .article-body > :not(#blank-log) { display: none !important; }
+  body.maintenance-log-page,
+  body.maintenance-log-page main,
+  body.maintenance-log-page .article-section,
+  body.maintenance-log-page .article-body {
+    display: block;
+    visibility: visible !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: none;
+    background: #fff;
+  }
+  body.maintenance-log-page #blank-log { position: static; color: #000; font-size: 10pt; }
+  body.maintenance-log-page #blank-log h2 { font-size: 20pt; }
+  body.maintenance-log-page #blank-log .worksheet-table { table-layout: fixed; }
+  body.maintenance-log-page #blank-log tr { break-inside: avoid; }
+  body.maintenance-log-page #blank-log td { height: 48px; }
+  body.maintenance-log-page > iframe { display: none !important; }
+}
