@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1500" viewBox="0 0 1000 1500">
+    <rect width="1000" height="1500" fill="#f8f3e9"/>
+    <rect width="1000" height="24" fill="#d2a85f"/>
+    <circle cx="920" cy="124" r="148" fill="#a95638" opacity="0.16"/>
+    <circle cx="70" cy="1040" r="210" fill="#d2a85f" opacity="0.12"/>
+    <rect x="72" y="88" width="420" height="60" rx="30" fill="#a95638"/>
+    <text x="282" y="127" text-anchor="middle" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" letter-spacing="2.5">PROTECT THE RECORDS</text>
+    <text x="72" y="270" fill="#17372f" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700">Emergency Contacts</text>
+<text x="72" y="348" fill="#17372f" font-family="Georgia, 'Times New Roman', serif" font-size="66" font-weight="700">+ Documents</text>
+    <text x="74" y="476" fill="#50645d" font-family="Arial, Helvetica, sans-serif" font-size="27">Keep the right information accessible and secure</text>
+    <rect x="62" y="556" width="876" height="438" rx="38" fill="#dfe9df"/>
+    <rect x="105" y="601" width="790" height="72" rx="20" fill="#ffffff" opacity="0.96"/>
+      <rect x="129" y="621" width="32" height="32" rx="8" fill="none" stroke="#a95638" stroke-width="5"/>
+      <path d="M136 637l8 8 17-21" fill="none" stroke="#a95638" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="183" y="645" fill="#25483d" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Verified contacts</text>
+<rect x="105" y="693" width="790" height="72" rx="20" fill="#ffffff" opacity="0.96"/>
+      <rect x="129" y="713" width="32" height="32" rx="8" fill="none" stroke="#a95638" stroke-width="5"/>
+      <path d="M136 729l8 8 17-21" fill="none" stroke="#a95638" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="183" y="737" fill="#25483d" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Insurance + property records</text>
+<rect x="105" y="785" width="790" height="72" rx="20" fill="#ffffff" opacity="0.96"/>
+      <rect x="129" y="805" width="32" height="32" rx="8" fill="none" stroke="#a95638" stroke-width="5"/>
+      <path d="M136 821l8 8 17-21" fill="none" stroke="#a95638" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="183" y="829" fill="#25483d" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Protected backups</text>
+<rect x="105" y="877" width="790" height="72" rx="20" fill="#ffffff" opacity="0.96"/>
+      <rect x="129" y="897" width="32" height="32" rx="8" fill="none" stroke="#a95638" stroke-width="5"/>
+      <path d="M136 913l8 8 17-21" fill="none" stroke="#a95638" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="183" y="921" fill="#25483d" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Cash + payment access</text>
+    <rect x="72" y="1330" width="856" height="4" rx="2" fill="#d2a85f"/>
+    <text x="72" y="1405" fill="#17372f" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700">HOME ROUTINE GUIDE</text>
+    <text x="928" y="1405" text-anchor="end" fill="#50645d" font-family="Arial, Helvetica, sans-serif" font-size="22">homeroutineguide.com</text>
+    <text x="72" y="1450" fill="#50645d" font-family="Arial, Helvetica, sans-serif" font-size="20">Practical guidance for new homeowners</text>
+  </svg>

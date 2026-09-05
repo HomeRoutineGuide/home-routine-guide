@@ -170,6 +170,7 @@
 .guide-offer p { max-width: 680px; }
 .guide-offer .hero-actions { margin: 22px 0 0; }
 .article-body .guide-offer .button { text-decoration: none; }
+.article-body .button-primary { color: #fff; }
 
 .policy-hero { padding-bottom: 48px; }
 .policy-hero .article-hero-inner { grid-template-columns: 1fr; max-width: 880px; }
@@ -214,6 +215,31 @@
 .printable-sheet-header h2,
 .printable-sheet-header h3 { margin: 0 0 6px; padding: 0; }
 .printable-sheet-header p { margin: 0; }
+
+.worksheet-checklist {
+  display: grid;
+  gap: 0;
+  padding: 0 !important;
+  margin: 18px 0 24px !important;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.worksheet-checklist li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: start;
+  margin: 0;
+  padding: 11px 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.worksheet-checklist li span {
+  color: var(--forest);
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
 
 .worksheet-fields {
   display: grid;
