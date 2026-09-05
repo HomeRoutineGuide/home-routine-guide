@@ -170,6 +170,7 @@
 .guide-offer p { max-width: 680px; }
 .guide-offer .hero-actions { margin: 22px 0 0; }
 .article-body .guide-offer .button { text-decoration: none; }
+.article-body .button-primary { color: #fff; }
 
 .policy-hero { padding-bottom: 48px; }
 .policy-hero .article-hero-inner { grid-template-columns: 1fr; max-width: 880px; }
