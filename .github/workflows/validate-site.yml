@@ -1,0 +1,22 @@
+name: Validate website source
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out website source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check links, metadata, structured data, and privacy basics
+        run: python3 scripts/validate-site.py
