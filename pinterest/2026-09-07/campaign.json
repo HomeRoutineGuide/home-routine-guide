@@ -1,0 +1,101 @@
+{
+  "status": "Prepared; not published or scheduled",
+  "reviewed": "2026-09-07",
+  "pins": [
+    {
+      "slug": "five-home-folders",
+      "title": "Five Folders for Your New Home Records",
+      "heading": [
+        "Five folders.",
+        "One home."
+      ],
+      "lines": [
+        "Property + systems",
+        "Warranties + repairs",
+        "Contractor records"
+      ],
+      "target": "home-maintenance-records-to-keep.html#records-checklist",
+      "description": "Start organizing your new home with five practical record categories. Read the free checklist, keep private records secure, and use the worked example to start your own log.",
+      "brief": "Cream background, five overlapping forest-green folder tabs, large two-line title above three white record-category cards. Gold dividers; no actual household documents.",
+      "url": "https://homeroutineguide.com/home-maintenance-records-to-keep.html#records-checklist",
+      "alt": "Home Routine Guide: Five folders. One home. Property + systems; Warranties + repairs; Contractor records. Free guide or tool.",
+      "imageBrief": "1000 by 1500 pixels. Home Routine Guide branding only. Cream background, five overlapping forest-green folder tabs, large two-line title above three white record-category cards. Gold dividers; no actual household documents. Forest #17372f, cream #f8f3e9, gold #d2a85f; generous margins and legible text."
+    },
+    {
+      "slug": "first-service-entry",
+      "title": "Your First Home Service Record: What to Write",
+      "heading": [
+        "Service finished?",
+        "Save the details."
+      ],
+      "lines": [
+        "Date + work completed",
+        "Cost + invoice location",
+        "Next action"
+      ],
+      "target": "home-maintenance-records-to-keep.html#first-record",
+      "description": "Not sure what belongs in a maintenance entry? Follow a clearly fictional example that connects completed work, cost, supporting documents, and the next action. Free homeowner guide.",
+      "brief": "Forest-green background, cream receipt outline with blank lines, three pale cards for the log fields. Make the heading prominent; do not invent a real invoice or service claim.",
+      "url": "https://homeroutineguide.com/home-maintenance-records-to-keep.html#first-record",
+      "alt": "Home Routine Guide: Service finished? Save the details. Date + work completed; Cost + invoice location; Next action. Free guide or tool.",
+      "imageBrief": "1000 by 1500 pixels. Home Routine Guide branding only. Forest-green background, cream receipt outline with blank lines, three pale cards for the log fields. Make the heading prominent; do not invent a real invoice or service claim. Forest #17372f, cream #f8f3e9, gold #d2a85f; generous margins and legible text."
+    },
+    {
+      "slug": "blank-maintenance-log",
+      "title": "Free Printable Home Maintenance Log — No Signup",
+      "heading": [
+        "Start your",
+        "maintenance log."
+      ],
+      "lines": [
+        "Print a blank worksheet",
+        "Record completed work",
+        "Keep the next step visible"
+      ],
+      "target": "home-maintenance-log-printable.html#blank-log",
+      "description": "Open the free blank home maintenance log and print it for service dates, completed work, costs, document references, and follow-up. No signup required for the blank log.",
+      "brief": "Cream background, forest-green ruled-sheet motif, three white checklist rows, small FREE BLANK LOG label. Do not depict the paid binder or imply the full product is free.",
+      "url": "https://homeroutineguide.com/home-maintenance-log-printable.html#blank-log",
+      "alt": "Home Routine Guide: Start your maintenance log. Print a blank worksheet; Record completed work; Keep the next step visible. Free guide or tool.",
+      "imageBrief": "1000 by 1500 pixels. Home Routine Guide branding only. Cream background, forest-green ruled-sheet motif, three white checklist rows, small FREE BLANK LOG label. Do not depict the paid binder or imply the full product is free. Forest #17372f, cream #f8f3e9, gold #d2a85f; generous margins and legible text."
+    },
+    {
+      "slug": "inspection-follow-up-list",
+      "title": "Turn Your Inspection Report Into a Follow-Up List",
+      "heading": [
+        "Inspection report",
+        "to next steps."
+      ],
+      "lines": [
+        "Record the finding",
+        "Note the recommended follow-up",
+        "Track dates + status"
+      ],
+      "target": "home-inspection-report-action-plan.html",
+      "description": "Use the free Inspection Report Action Planner to organize findings, recommended follow-up, dates, and status without uploading your report. Follow your inspector’s guidance and seek qualified help for safety concerns.",
+      "brief": "Forest-green background, cream three-step planning cards with numbered circles, gold connecting marks. Educational planning only: no inspected-home seal or professional endorsement.",
+      "url": "https://homeroutineguide.com/home-inspection-report-action-plan.html",
+      "alt": "Home Routine Guide: Inspection report to next steps. Record the finding; Note the recommended follow-up; Track dates + status. Free guide or tool.",
+      "imageBrief": "1000 by 1500 pixels. Home Routine Guide branding only. Forest-green background, cream three-step planning cards with numbered circles, gold connecting marks. Educational planning only: no inspected-home seal or professional endorsement. Forest #17372f, cream #f8f3e9, gold #d2a85f; generous margins and legible text."
+    },
+    {
+      "slug": "share-a-free-home-log",
+      "title": "Know Someone Who Just Moved? Share a Free Home Log",
+      "heading": [
+        "A new-home",
+        "starting point."
+      ],
+      "lines": [
+        "Share the public log link",
+        "Let them print a blank copy",
+        "Keep private details private"
+      ],
+      "target": "home-maintenance-log-printable.html#blank-log",
+      "description": "Help a new homeowner start a useful maintenance record with this free public worksheet link. Share the link, not a completed log containing private household information. No partnership or redistribution license is implied.",
+      "brief": "Cream background, forest-green house outline and simple link symbol, three clear sharing steps. No realtor logos, personal names, partnership claims, or screenshots of completed records.",
+      "url": "https://homeroutineguide.com/home-maintenance-log-printable.html#blank-log",
+      "alt": "Home Routine Guide: A new-home starting point. Share the public log link; Let them print a blank copy; Keep private details private. Free guide or tool.",
+      "imageBrief": "1000 by 1500 pixels. Home Routine Guide branding only. Cream background, forest-green house outline and simple link symbol, three clear sharing steps. No realtor logos, personal names, partnership claims, or screenshots of completed records. Forest #17372f, cream #f8f3e9, gold #d2a85f; generous margins and legible text."
+    }
+  ]
+}
