@@ -1,0 +1,140 @@
+{
+  "status": "Prepared only. No Pinterest publication or scheduling performed.",
+  "reviewed": "2026-09-14",
+  "brand": "Home Routine Guide",
+  "publicationGate": "An authenticated supported Home Routine Guide Pinterest connection is required. Recheck the actual brand, board, existing queue, destination, alt text and AI disclosure before scheduling. Preserve existing schedules; at most one fresh Pin per day.",
+  "dimensions": {
+    "productionBrief": {
+      "width": 1000,
+      "height": 1500
+    },
+    "generatedFiles": {
+      "width": 1024,
+      "height": 1536
+    },
+    "ratio": "2:3",
+    "note": "Native generated PNG files have not been resampled. The production briefs specify a 1000-by-1500 export if required."
+  },
+  "pins": [
+    {
+      "aiDisclosure": "AI-generated illustration. Preserve provenance metadata; use the platform's applicable AI-content disclosure when publishing.",
+      "alt": "Home Routine Guide graphic with a dishwasher and washing machine above record fields: model and serial, purchase date, and receipt and manual location. Free appliance inventory worksheet.",
+      "asset": "pinterest/2026-09-14/appliance-details.png",
+      "assetDimensions": {
+        "height": 1536,
+        "width": 1024
+      },
+      "assetStatus": "Generated and visually reviewed; prepared only; not published or scheduled",
+      "description": "Start with one appliance: record its model and serial number, purchase date, and receipt or manual location. Use the free Home Routine Guide worksheet in your browser, then print it. No signup required. Refreshing clears typed entries, so keep your own copy securely.",
+      "heading": "Know your appliances.",
+      "imageBrief": "1000 by 1500 pixels, 2:3 portrait. Cream background, large forest-green serif headline 'Know your appliances.' above simple dishwasher and washing-machine line illustrations. Three generously spaced index-card rows read 'Model + serial', 'Purchase date', and 'Receipt + manual location'. Bottom label 'Free appliance inventory worksheet'. Home Routine Guide brand at top and homeroutineguide.com footer. Gold rules decorative only. Use blank record motifs, not real equipment labels. Keep 80-pixel safe margins and large text; no personal details, logos of appliance makers, seals, guarantees, or paid-binder mockups.",
+      "lines": [
+        "Model + serial",
+        "Purchase date",
+        "Receipt + manual location"
+      ],
+      "slug": "appliance-details",
+      "sources": [
+        "https://content.naic.org/consumer/home-inventory"
+      ],
+      "title": "Free Appliance Inventory: Keep Model and Purchase Details Together",
+      "url": "https://homeroutineguide.com/home-appliance-inventory-printable.html#worksheet"
+    },
+    {
+      "aiDisclosure": "AI-generated illustration. Preserve provenance metadata; use the platform's applicable AI-content disclosure when publishing.",
+      "alt": "Home Routine Guide project-planning graphic with three numbered steps: define the result, list your must-haves, and write your questions. Free home project worksheet.",
+      "asset": "pinterest/2026-09-14/project-before-estimates.png",
+      "assetDimensions": {
+        "height": 1536,
+        "width": 1024
+      },
+      "assetStatus": "Generated and visually reviewed; prepared only; not published or scheduled",
+      "description": "Before comparing estimates, write down the result you want, what belongs in the job, and the questions you still need answered. The free Home Routine Guide project worksheet helps organize those notes. It does not replace a contract, design, permit guidance, or a qualified professional.",
+      "heading": "Before you ask for estimates.",
+      "imageBrief": "1000 by 1500 pixels, 2:3 portrait. Forest-green background with cream text. Large heading 'Before you ask for estimates.' in the top third. Below, an oversized cream clipboard holds three separate numbered panels: 'Define the result', 'List your must-haves', 'Write your questions'. Small line-art pencil and empty plan grid at bottom, no structural drawings. Label 'Free home project worksheet'. Home Routine Guide at top; homeroutineguide.com at bottom. Restrained gold divider lines, 80-pixel safe margins, large readable text. No contractor badges, money amounts, building instructions, real paperwork, or promises of lower prices.",
+      "lines": [
+        "Define the result",
+        "List your must-haves",
+        "Write your questions"
+      ],
+      "slug": "project-before-estimates",
+      "sources": [
+        "https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam"
+      ],
+      "title": "Before Contractor Estimates: Define Your Home Project",
+      "url": "https://homeroutineguide.com/home-project-planner-printable.html#worksheet"
+    },
+    {
+      "aiDisclosure": "AI-generated illustration. Preserve provenance metadata; use the platform's applicable AI-content disclosure when publishing.",
+      "alt": "Home Routine Guide contact-record graphic linking a provider card to work completed and an invoice location. Free contractor contact worksheet. Recheck before hiring.",
+      "asset": "pinterest/2026-09-14/contractor-work-history.png",
+      "assetDimensions": {
+        "height": 1536,
+        "width": 1024
+      },
+      "assetStatus": "Generated and visually reviewed; prepared only; not published or scheduled",
+      "description": "Keep a provider's contact details connected to the work they performed and the invoice location. Use the free Home Routine Guide contact worksheet, then store your completed copy privately. A past entry is not an endorsement: recheck qualifications, licensing requirements, and insurance before hiring.",
+      "heading": "Who worked on your home?",
+      "imageBrief": "1000 by 1500 pixels, 2:3 portrait. Cream background and forest-green typography. Large headline 'Who worked on your home?' above a simple three-card vertical record chain, connected by thin decorative gold lines. Cards read 'Provider + contact', 'Work completed', 'Invoice location'. Use generic outline icons of a contact card, wrench, and document; no invented names or phone numbers. Small safety line 'Recheck before hiring'. Bottom label 'Free contractor contact worksheet'. Home Routine Guide branding and homeroutineguide.com footer. Wide margins and large text. No vetted-provider badges, professional endorsements, real business details, or partner logos.",
+      "lines": [
+        "Provider + contact",
+        "Work completed",
+        "Invoice location"
+      ],
+      "slug": "contractor-work-history",
+      "sources": [
+        "https://consumer.ftc.gov/articles/how-avoid-home-improvement-scam"
+      ],
+      "title": "Who Worked on Your Home? Start a Contractor Contact Record",
+      "url": "https://homeroutineguide.com/home-contractor-contact-list-printable.html#worksheet"
+    },
+    {
+      "aiDisclosure": "AI-generated illustration. Preserve provenance metadata; use the platform's applicable AI-content disclosure when publishing.",
+      "alt": "Home Routine Guide budget-planning graphic showing three equal planning cards for routine maintenance, a planned project, and a reserve target. Use your own numbers. Free budget planner.",
+      "asset": "pinterest/2026-09-14/home-budget-own-numbers.png",
+      "assetDimensions": {
+        "height": 1536,
+        "width": 1024
+      },
+      "assetStatus": "Generated and visually reviewed; prepared only; not published or scheduled",
+      "description": "Enter your routine-maintenance, planned-project, and reserve targets to see the monthly arithmetic in the free Home Routine Guide planner. It uses your chosen inputs, not a universal savings percentage or a prediction of repair costs. No account required.",
+      "heading": "Give home costs a plan.",
+      "imageBrief": "1000 by 1500 pixels, 2:3 portrait. Forest-green background and cream text. Headline 'Give home costs a plan.' above three equal-sized cream cards with forest labels 'Routine maintenance', 'Planned project', 'Reserve target'. Use small calendar, house-outline, and folder icons. No pie chart, percentages, dollar amounts, financial returns, or implied optimal allocation. Subheading 'Use your own numbers'. Bottom label 'Free budget planner'. Home Routine Guide brand top and homeroutineguide.com footer. Decorative gold separators only, generous margins, high-contrast mobile-readable type.",
+      "lines": [
+        "Routine maintenance",
+        "Planned project",
+        "Reserve target"
+      ],
+      "slug": "home-budget-own-numbers",
+      "sources": [
+        "https://www.consumerfinance.gov/owning-a-home/prepare/figure-out-how-much-you-want-to-spend/"
+      ],
+      "title": "Home Maintenance Budget Planner: Use Your Own Numbers",
+      "url": "https://homeroutineguide.com/maintenance-budget.html"
+    },
+    {
+      "aiDisclosure": "AI-generated illustration. Preserve provenance metadata; use the platform's applicable AI-content disclosure when publishing.",
+      "alt": "Home Routine Guide warranty-records graphic with two blank document outlines and three reminders: identify the product, find the written terms, and keep the claim contact. Free records guide.",
+      "asset": "pinterest/2026-09-14/warranty-receipt-pair.png",
+      "assetDimensions": {
+        "height": 1536,
+        "width": 1024
+      },
+      "assetStatus": "Generated and visually reviewed; prepared only; not published or scheduled",
+      "description": "A record is more useful when it points to the written warranty, receipt, exact product, and claims contact. Read the free Home Routine Guide to the fields worth keeping together. This is an organization guide, not a promise of warranty coverage or a free version of the paid Binder.",
+      "heading": "Receipt + warranty. Keep them together.",
+      "imageBrief": "1000 by 1500 pixels, 2:3 portrait. Cream background, forest-green text. A large headline 'Receipt + warranty. Keep them together.' sits above two overlapping blank document illustrations labeled 'Receipt' and 'Warranty'. Below are three readable lines: 'Identify the product', 'Find the written terms', 'Keep the claim contact'. Bottom label 'Free records guide'. Home Routine Guide at top; homeroutineguide.com at bottom. Gold corner lines decorative only. No real purchases, dates, personal data, government seals, insurer logos, stamps indicating coverage, or claims that the guide is a fillable worksheet.",
+      "lines": [
+        "Identify the product",
+        "Find the written terms",
+        "Keep the claim contact"
+      ],
+      "slug": "warranty-receipt-pair",
+      "sources": [
+        "https://consumer.ftc.gov/articles/warranties"
+      ],
+      "title": "Keep the Receipt With the Warranty: A Home Records Checklist",
+      "url": "https://homeroutineguide.com/home-warranty-tracker-printable.html"
+    }
+  ]
+}
