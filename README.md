@@ -46,7 +46,7 @@ Home Routine Guide is a practical homeowner education platform for first-time an
 
 ### Phase 2 — first product
 
-- Focus the offer on the $19, 44-page New Homeowner Starter Binder
+- Focus the offer on the $9.99, 44-page New Homeowner Starter Binder
 - Use the free checklist and buyer-intent guides to lead into one clear paid product
 - Improve the binder and sales page from real subscriber and customer questions before adding another offer
 
