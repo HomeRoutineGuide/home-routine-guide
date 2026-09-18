@@ -37,6 +37,8 @@ errors, indexable, emails = [], set(), set()
 json_blocks = 0
 for path in files:
     name, content, page = path.name, path.read_text(), pages[path.name]
+    if re.search(r'\$19(?:\.00)?(?!\d|\.\d)', content):
+        errors.append(f'{name}: outdated Binder price; expected $9.99')
     metas = {a.get('name'): a.get('content', '') for t, a in page.tags if t == 'meta'}
     canonical = [a.get('href') for t, a in page.tags if t == 'link' and a.get('rel') == 'canonical']
     expected = base if name == 'index.html' else base + name
@@ -78,12 +80,14 @@ sitemap = {n.text for n in ET.parse(root / 'sitemap.xml').findall('.//{http://ww
 if sitemap != indexable: errors.append(f'sitemap mismatch: {sorted(sitemap ^ indexable)}')
 if emails != {'info@homeroutineguide.com'}: errors.append('Unexpected public email')
 for file in root.rglob('*.js'):
+    if re.search(r'\$19(?:\.00)?(?!\d|\.\d)', file.read_text()):
+        errors.append(f'{file.name}: outdated Binder price; expected $9.99')
     check = subprocess.run(['node', '--check', str(file)], capture_output=True, text=True)
     if check.returncode: errors.append(f'{file.name}: JavaScript syntax')
 
 checkout = 'https://home-routine-guide.kit.com/products/19-starter-binder?step=checkout'
 product = (root / 'packages.html').read_text()
-if checkout not in product or '$19' not in product or '44' not in product:
+if checkout not in product or '$9.99' not in product or '44' not in product:
     errors.append('Product offer or checkout destination changed; review required')
 print(json.dumps({'html_files': len(files), 'indexable_urls': len(indexable),
                   'jsonld_blocks': json_blocks, 'errors': errors}, indent=2))
