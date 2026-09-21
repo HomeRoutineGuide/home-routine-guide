@@ -1,3 +1,5 @@
+> Historical campaign archive. Do not repost the old-price comparison graphic or caption. The current offer is $9.99; use social/2026-09-18 for the corrected comparison.
+
 # Instagram recordkeeping campaign
 
 Five 1080 × 1350 original graphics form two educational carousels and one optional product comparison. Caption, destination, alt text and proposed date for each post are in [campaign.json](campaign.json). No customer information or real invoice is used. The service example is fictional and not a price estimate.

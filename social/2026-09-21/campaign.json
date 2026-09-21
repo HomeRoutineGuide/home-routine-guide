@@ -1,0 +1,30 @@
+{
+  "status": "Prepared; verify scheduling separately in Metricool",
+  "artwork": "Original code-native vector cards, not AI-generated imagery",
+  "posts": [
+    {
+      "pin": 0,
+      "date": "2026-09-22T10:00:00-04:00",
+      "caption": "Two quotes can have different prices because they describe different jobs.\n\nBefore deciding, compare the written scope, materials, exclusions and completion date. Ask about anything missing. The FTC recommends getting multiple written estimates and not automatically choosing the lowest bidder.\n\nFree guide: homeroutineguide.com → Free Checklists → How to Compare Contractor Estimates. The guide organizes questions; it does not verify or recommend a contractor.\n\n#NewHomeowner #HomeProjects #HomeMaintenance",
+      "file": "estimate-missing-details.png",
+      "alt": "Home Routine Guide: Same job? Check the details. Written scope + materials; Exclusions + completion date; Questions before a decision. Free educational resource.",
+      "target": "https://homeroutineguide.com/how-to-compare-contractor-estimates.html"
+    },
+    {
+      "pin": 2,
+      "date": "2026-09-24T10:00:00-04:00",
+      "caption": "Before a warranty-service call, gather the receipt, written warranty, model and serial number, and claim contact.\n\nKeep the originals securely. An organized record helps you find the details; it does not establish that a repair is covered. Follow the actual written terms.\n\nFree recordkeeping guide: homeroutineguide.com → Free Checklists → Printable Home Warranty Tracker.\n\n#NewHomeowner #HomeOrganization #HomeRecords",
+      "file": "warranty-next-call.png",
+      "alt": "Home Routine Guide: Warranty call? Find these first. Receipt + written warranty; Model + serial number; Claim contact + notes. Free educational resource.",
+      "target": "https://homeroutineguide.com/home-warranty-tracker-printable.html"
+    },
+    {
+      "pin": 3,
+      "date": "2026-09-26T10:00:00-04:00",
+      "caption": "A finished home project still needs a record.\n\nKeep the final scope and invoice, written warranty and manuals, and any remaining follow-up together. Record what actually happened, not what you assume.\n\nFree worksheet: homeroutineguide.com → Free Checklists → Home Project Planner Printable. Type into the browser sheet or print a blank copy. Entries are not saved; print your own copy before leaving. Keep completed records private.\n\n#HomeProjects #NewHomeowner #HomeOrganization",
+      "file": "project-closeout-records.png",
+      "alt": "Home Routine Guide: Project done? Keep the records. Final scope + invoice; Written warranty + manuals; Follow-up still outstanding. Free educational resource.",
+      "target": "https://homeroutineguide.com/home-project-planner-printable.html#worksheet"
+    }
+  ]
+}
