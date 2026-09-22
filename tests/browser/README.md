@@ -6,4 +6,6 @@ Run `npm ci --ignore-scripts --no-audit --no-fund`, `npx playwright install --wi
 
 This is a focused regression gate, not a comprehensive accessibility, security, performance, or device certification. Review the rendered evidence before merging layout changes. The workflow uses the existing read-only permission and no account credentials.
 
+The job also emits the exact bytes of four allowlisted public-page review captures in its log for clients that cannot download artifact ZIPs. This does not include traces, live account pages, form entries, or private data. Do not broaden that allowlist to authenticated/customer pages.
+
 Implementation reference: https://playwright.dev/docs/ci-intro, reviewed September 22, 2026.

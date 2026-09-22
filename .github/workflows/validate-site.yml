@@ -33,6 +33,9 @@ jobs:
       - name: Check desktop, mobile, and print customer paths
         working-directory: tests/browser
         run: npm test
+      - name: Make public-page review evidence available to text-only clients
+        if: ${{ success() }}
+        run: python3 tests/browser/emit-review-evidence.py
       - name: Save browser review evidence
         if: ${{ !cancelled() }}
         uses: actions/upload-artifact@v4
