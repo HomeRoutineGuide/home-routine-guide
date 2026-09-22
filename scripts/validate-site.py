@@ -80,6 +80,8 @@ sitemap = {n.text for n in ET.parse(root / 'sitemap.xml').findall('.//{http://ww
 if sitemap != indexable: errors.append(f'sitemap mismatch: {sorted(sitemap ^ indexable)}')
 if emails != {'info@homeroutineguide.com'}: errors.append('Unexpected public email')
 for file in root.rglob('*.js'):
+    if 'node_modules' in file.relative_to(root).parts:
+        continue
     if re.search(r'\$19(?:\.00)?(?!\d|\.\d)', file.read_text()):
         errors.append(f'{file.name}: outdated Binder price; expected $9.99')
     check = subprocess.run(['node', '--check', str(file)], capture_output=True, text=True)
