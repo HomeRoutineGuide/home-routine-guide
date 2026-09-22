@@ -75,6 +75,7 @@ test('referral section remains readable in print', async ({page}, testInfo) => {
   await page.goto('/resources.html#share');
   await page.evaluate(() => document.fonts.ready);
   await page.emulateMedia({media:'print'});
+  await expect(page.getByRole('link', {name:'Skip to content', includeHidden:true})).toBeHidden();
   await expect(page.locator('#share')).toBeVisible();
   await checkHorizontalFit(page);
   await page.locator('#share').screenshot({path:testInfo.outputPath('referral-print.png')});

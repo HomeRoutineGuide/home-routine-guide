@@ -169,6 +169,10 @@ h3 { font-size: 1.3rem; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 24px; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); margin-top: 40px; padding-top: 22px; display: flex; justify-content: space-between; gap: 30px; font-size: .78rem; }
 
+@media print {
+  .skip-link { display: none; }
+}
+
 @media (max-width: 900px) {
   .hero-grid,.routine-grid,.guide-grid,.sources-grid,.launch-card,.split-heading { grid-template-columns: 1fr; gap: 42px; }
   .hero { padding-top: 60px; }
