@@ -12,7 +12,7 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - name: Check out website source
         uses: actions/checkout@v4
@@ -20,3 +20,26 @@ jobs:
           persist-credentials: false
       - name: Check links, metadata, structured data, and privacy basics
         run: python3 scripts/validate-site.py
+      - name: Set up browser-test runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install pinned browser-test dependencies
+        working-directory: tests/browser
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Install Chromium for website validation
+        working-directory: tests/browser
+        run: npx playwright install --with-deps chromium
+      - name: Check desktop, mobile, and print customer paths
+        working-directory: tests/browser
+        run: npm test
+      - name: Make public-page review evidence available to text-only clients
+        if: ${{ success() }}
+        run: python3 tests/browser/emit-review-evidence.py
+      - name: Save browser review evidence
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-browser-review
+          path: tests/browser/test-results/
+          retention-days: 7
