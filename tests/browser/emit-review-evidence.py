@@ -10,7 +10,8 @@ from pathlib import Path
 
 root = Path(__file__).parent / 'test-results'
 allowed = {'referral-1280.png', 'referral-390.png', 'referral-print.png',
-           'resources-print.pdf'}
+           'resources-print.pdf', 'calendar-1280.png', 'calendar-390.png',
+           'calendar-print.pdf'}
 for path in sorted(root.rglob('*')):
     if path.is_file() and path.name in allowed:
         data = path.read_bytes()

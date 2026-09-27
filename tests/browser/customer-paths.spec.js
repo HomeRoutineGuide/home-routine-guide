@@ -81,3 +81,44 @@ test('referral section remains readable in print', async ({page}, testInfo) => {
   await page.locator('#share').screenshot({path:testInfo.outputPath('referral-print.png')});
   await page.pdf({path:testInfo.outputPath('resources-print.pdf'),format:'A4',printBackground:true});
 });
+
+for (const width of [1280, 390]) {
+  test(`free calendar can be found, filled and printed at ${width}px`, async ({page}, testInfo) => {
+    await page.setViewportSize({width, height:900});
+    const errors = [];
+    page.on('pageerror', error => errors.push(error.message));
+    await page.goto('/resources.html#free-worksheets');
+    await page.getByRole('link', {name:'Open the free maintenance calendar →'}).click();
+    await expect(page).toHaveURL(/home-maintenance-calendar-printable\.html#calendar-worksheet$/);
+    await page.evaluate(() => document.fonts.ready);
+    await expect(page.locator('#calendar-title')).toBeInViewport();
+    await checkHorizontalFit(page);
+    await expect(page.locator('.calendar-month textarea')).toHaveCount(12);
+    await page.getByLabel('Year', {exact:true}).fill('2026');
+    await page.getByLabel('January tasks, due dates and who', {exact:true}).fill('Example only: read equipment manual / Jan 15 / owner');
+    await page.getByLabel('December tasks, due dates and who', {exact:true}).fill('Example only: review next-year dates / Dec 15 / owner');
+    await page.locator('#calendar-worksheet').screenshot({path:testInfo.outputPath(`calendar-${width}.png`)});
+    await page.evaluate(() => { window.print = () => { window.calendarPrintCalled = true; }; });
+    const print = page.getByRole('button', {name:'Print or save calendar'});
+    await print.focus();
+    await page.keyboard.press('Enter');
+    expect(await page.evaluate(() => window.calendarPrintCalled)).toBe(true);
+    if (width === 1280) {
+      await page.setViewportSize({width:703,height:1032});
+      await page.emulateMedia({media:'print'});
+      await expect(print).toBeHidden();
+      await expect(page.locator('.site-header')).toBeHidden();
+      await expect(page.locator('#calendar-worksheet')).toBeVisible();
+      // The longest permitted note must remain printable without clipping.
+      const december = page.getByLabel('December tasks, due dates and who', {exact:true});
+      await december.fill('W'.repeat(100));
+      expect(await december.evaluate(e => e.scrollHeight <= e.clientHeight + 1)).toBe(true);
+      await december.fill('Example only: review next-year dates / Dec 15 / owner');
+      await page.pdf({path:testInfo.outputPath('calendar-print.pdf'),format:'A4',preferCSSPageSize:true,printBackground:true});
+    }
+    expect(errors).toEqual([]);
+    await page.reload();
+    await expect(page.locator('#calendar-year')).toHaveValue('');
+    await expect(page.locator('#calendar-january')).toHaveValue('');
+  });
+}

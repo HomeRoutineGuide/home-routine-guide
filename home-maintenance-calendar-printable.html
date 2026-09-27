@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Maintenance Calendar Printable | Home Routine Guide</title>
-  <meta name="description" content="Build a printable home maintenance calendar for recurring tasks, provider visits, seasonal work, completion dates, and next actions." />
+  <title>Free Home Maintenance Calendar Printable | Home Routine Guide</title>
+  <meta name="description" content="Print a free 12-month home maintenance calendar. Add verified tasks, due dates and who handles them; use the guide to plan around your actual home." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://homeroutineguide.com/home-maintenance-calendar-printable.html" />
-  <meta property="og:title" content="Printable Home Maintenance Calendar" />
-  <meta property="og:description" content="A practical way to organize recurring home maintenance by month without blindly copying a generic schedule." />
+  <meta property="og:title" content="Free 12-Month Home Maintenance Calendar" />
+  <meta property="og:description" content="An undated, free calendar you can type into or print blank. Plan tasks from your actual equipment and climate; no signup required." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://homeroutineguide.com/home-maintenance-calendar-printable.html" />
   <meta property="og:image" content="https://homeroutineguide.com/new-homeowner-starter-binder.png?v=20260918" />
@@ -19,17 +19,44 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="article.css" />
   <link rel="stylesheet" href="marketing.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Printable Home Maintenance Calendar: How to Build One","description":"A practical framework for building a printable home maintenance calendar around the homeowner's actual equipment, climate, service providers, and recurring tasks.","datePublished":"2026-08-07","dateModified":"2026-08-07","publisher":{"@type":"Organization","name":"Home Routine Guide"},"mainEntityOfPage":"https://homeroutineguide.com/home-maintenance-calendar-printable.html"}</script>
+  <link rel="stylesheet" href="maintenance-calendar.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Free Home Maintenance Calendar Printable","description":"A free undated 12-month calendar and practical guidance for planning verified tasks around actual home equipment, climate and service needs.","datePublished":"2026-08-07","dateModified":"2026-09-27","publisher":{"@type":"Organization","name":"Home Routine Guide"},"mainEntityOfPage":"https://homeroutineguide.com/home-maintenance-calendar-printable.html"}</script>
 </head>
-<body>
+<body class="calendar-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="container nav-wrap"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true"><span class="roof"></span><span class="door"></span></span><span>Home Routine Guide</span></a><nav aria-label="Primary navigation"><button class="menu-toggle" aria-expanded="false" aria-controls="site-menu">Menu</button><div class="site-menu" id="site-menu"><a href="/#start">Start Here</a><a href="resources.html#checklists">Free Checklists</a><a href="resources.html#guides">Guides</a><a href="resources.html#tools">Free Tools</a><a href="packages.html">Starter Binder</a></div></nav></div></header>
 
   <main id="main">
-    <section class="article-hero"><div class="container article-hero-inner"><div><p class="eyebrow">Printable maintenance planning</p><h1>How to build a home maintenance calendar you will actually use</h1><p class="article-deck">A useful maintenance calendar is not a giant universal chore list. It records the recurring tasks that apply to your home, who handles them, when they are due, and what happened last time.</p><div class="article-meta"><span>Updated August 2026</span><span>About 9 minutes</span><span>Home maintenance planning</span></div></div><aside class="article-summary"><strong>The simple rule</strong><p>Schedule verified tasks from your equipment manuals, service providers, climate needs, and household routine. Do not copy every task from a generic calendar.</p><a class="button button-primary" href="#calendar-fields">See what to include</a></aside></div></section>
+    <section class="article-hero"><div class="container article-hero-inner"><div><p class="eyebrow">Printable maintenance planning</p><h1>Free home maintenance calendar printable</h1><p class="article-deck">A useful maintenance calendar is not a giant universal chore list. It records the recurring tasks that apply to your home, who handles them, when they are due, and what happened last time.</p><div class="article-meta"><span>Reviewed September 27, 2026</span><span>About 9 minutes</span><span>Home maintenance planning</span></div></div><aside class="article-summary"><strong>The simple rule</strong><p>Schedule verified tasks from your equipment manuals, service providers, climate needs, and household routine. Do not copy every task from a generic calendar.</p><a class="button button-primary" href="#calendar-worksheet">Open the free calendar</a></aside></div></section>
 
     <section class="article-section"><article class="container article-body">
       <p>A printable home maintenance calendar should reduce mental load. Instead of trying to remember every filter, inspection, service visit, seasonal task, and follow-up, you create one repeatable place to see what is due.</p>
+
+      <section class="calendar-sheet" id="calendar-worksheet" aria-labelledby="calendar-title">
+        <h2 class="calendar-heading" id="calendar-title">Your 12-month maintenance calendar</h2>
+        <p class="calendar-intro">Choose the year. Add short notes only for tasks you have verified for your home. A blank month is fine; repeat a task in each month it is due.</p>
+        <p class="calendar-screen-only">Free to use, with no signup. Type into the calendar or print it blank. Entries are not saved or submitted; print or save your own PDF before leaving. Keep private household details off this sheet. Each month allows 100 characters for a brief planning note.</p>
+        <label class="calendar-year" for="calendar-year">Year <input id="calendar-year" type="text" inputmode="numeric" maxlength="4" autocomplete="off" /></label>
+        <div class="calendar-months">
+          <fieldset class="calendar-month"><legend>January</legend><label for="calendar-january">Task, due date and who handles it</label><textarea id="calendar-january" aria-label="January tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>February</legend><label for="calendar-february">Task, due date and who handles it</label><textarea id="calendar-february" aria-label="February tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>March</legend><label for="calendar-march">Task, due date and who handles it</label><textarea id="calendar-march" aria-label="March tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>April</legend><label for="calendar-april">Task, due date and who handles it</label><textarea id="calendar-april" aria-label="April tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>May</legend><label for="calendar-may">Task, due date and who handles it</label><textarea id="calendar-may" aria-label="May tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>June</legend><label for="calendar-june">Task, due date and who handles it</label><textarea id="calendar-june" aria-label="June tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>July</legend><label for="calendar-july">Task, due date and who handles it</label><textarea id="calendar-july" aria-label="July tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>August</legend><label for="calendar-august">Task, due date and who handles it</label><textarea id="calendar-august" aria-label="August tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>September</legend><label for="calendar-september">Task, due date and who handles it</label><textarea id="calendar-september" aria-label="September tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>October</legend><label for="calendar-october">Task, due date and who handles it</label><textarea id="calendar-october" aria-label="October tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>November</legend><label for="calendar-november">Task, due date and who handles it</label><textarea id="calendar-november" aria-label="November tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+          <fieldset class="calendar-month"><legend>December</legend><label for="calendar-december">Task, due date and who handles it</label><textarea id="calendar-december" aria-label="December tasks, due dates and who" rows="3" maxlength="100" autocomplete="off"></textarea></fieldset>
+        </div>
+        <p class="calendar-footnote">Use equipment instructions, local conditions and qualified professional guidance to set dates. This is a planning aid, not an inspection or a universal service schedule. Record completed work in a separate maintenance log.</p>
+        <p class="calendar-print-brand">Home Routine Guide · homeroutineguide.com</p>
+        <div class="calendar-actions calendar-screen-only"><button class="button button-primary" type="button" onclick="window.print()">Print or save calendar</button></div>
+      </section>
+      <p>Start with one task whose timing you can verify. After it is done, record the result in the <a href="home-maintenance-log-printable.html#blank-log">free maintenance log</a>. For this season's planning prompts, use the <a href="fall-home-maintenance-checklist.html">fall home maintenance checklist</a>.</p>
+      <p><strong>Sharing with a new homeowner?</strong> Send the <a href="home-maintenance-calendar-printable.html#calendar-worksheet">public calendar link</a> in your welcome notes or resource list. Share blank resources, not completed private records. This does not grant rights to redistribute the paid Binder.</p>
 
       <h2 id="calendar-fields">What should be on a home maintenance calendar?</h2>
       <p>For each recurring task, record five things:</p>
@@ -52,9 +79,11 @@
       <p>Seasonal planning pages can then hold climate-dependent work that does not fit a simple monthly row.</p>
 
       <h2>Examples of calendar entries</h2>
+      <p>These examples are fictional. Replace the equipment, dates and provider with your own verified details. CPSC recommends monthly smoke and CO alarm tests; follow your device instructions and use the <a href="smoke-co-alarm-guide.html">alarm guide</a> for safety boundaries.</p>
       <div class="compare-table-wrap"><table class="compare-table"><thead><tr><th>Entry</th><th>Useful detail</th><th>Weak detail</th></tr></thead><tbody><tr><td>HVAC filter</td><td>Inspect 16×25×1 filter; replace if dirty; next check 9/1</td><td>HVAC</td></tr><tr><td>Cooling service</td><td>ABC Heating; spring checkup; invoice saved in Home/HVAC</td><td>AC service</td></tr><tr><td>Alarm review</td><td>Test according to device instructions; record result in alarm inventory</td><td>Smoke detectors</td></tr><tr><td>Seasonal drainage</td><td>Ground-level review after leaf drop; schedule qualified help if needed</td><td>Gutters</td></tr></tbody></table></div>
 
       <h2>How the Starter Binder handles the calendar</h2>
+      <p>The free calendar above is a simple annual overview. The optional paid Binder adds guided records and planning pages in one 44-page digital download; no physical binder is shipped.</p>
       <section class="offer-card" style="margin:38px 0"><img src="new-homeowner-starter-binder.webp?v=20260918" alt="Illustrative New Homeowner Starter Binder mockup: $9.99 digital download; no physical binder shipped" width="900" height="900" loading="lazy" decoding="async" style="display:block;width:100%;height:auto;border-radius:16px;margin-bottom:22px" /><div class="offer-card-top"><span class="offer-badge">44 guided pages</span><span>$9.99 one time</span></div><h2>New Homeowner Starter Binder</h2><p>The binder includes an annual recurring maintenance calendar plus monthly and seasonal planning pages. It also keeps repair history, contractor records, equipment details, budgets, and replacement planning next to the calendar so a completed task can become a useful record instead of disappearing.</p><ul class="offer-list"><li>Annual recurring maintenance calendar</li><li>Monthly home-maintenance check</li><li>Spring/summer and fall/winter planning pages</li><li>Service, repair, budget, and replacement records</li></ul><a class="button button-primary convertkit-button" href="https://home-routine-guide.kit.com/products/19-starter-binder?step=checkout" data-commerce>Get the 44-Page Binder — $9.99</a></section>
 
       <h2>Primary sources</h2>

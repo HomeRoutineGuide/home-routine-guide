@@ -6,6 +6,8 @@ Run `npm ci --ignore-scripts --no-audit --no-fund`, `npx playwright install --wi
 
 This is a focused regression gate, not a comprehensive accessibility, security, performance, or device certification. Review the rendered evidence before merging layout changes. The workflow uses the existing read-only permission and no account credentials.
 
-The job also emits the exact bytes of four allowlisted public-page review captures in its log for clients that cannot download artifact ZIPs. This does not include traces, live account pages, form entries, or private data. Do not broaden that allowlist to authenticated/customer pages.
+The job also emits the exact bytes of allowlisted public-page review captures in its log for clients that cannot download artifact ZIPs. Calendar captures use clearly fictional test entries only. This does not include traces, live account pages, real household records or private data. Do not broaden that allowlist to authenticated/customer pages.
+
+Calendar checks cover the library-to-worksheet route at both widths, all 12 labeled month fields, keyboard print activation, note fit in print and the absence of saved entries after reload. Review its paginated PDF as well as the browser screenshots.
 
 Implementation reference: https://playwright.dev/docs/ci-intro, reviewed September 22, 2026.

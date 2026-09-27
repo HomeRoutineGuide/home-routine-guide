@@ -1,0 +1,135 @@
+{
+  "preparedOn": "2026-09-27",
+  "artwork": "Original code-native vector artwork; no AI-generated imagery",
+  "sources": [
+    "https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist",
+    "https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center/CO-Alarms"
+  ],
+  "status": "Prepared; verify publication or queue separately in Metricool",
+  "posts": [
+    {
+      "slug": "calendar-start",
+      "date": "2026-09-29T10:00:00-04:00",
+      "target": "https://homeroutineguide.com/home-maintenance-calendar-printable.html#calendar-worksheet",
+      "caption": "A useful maintenance plan starts with your actual home.\n\nSwipe for a simple way to begin: choose a year, verify one task from the right instructions, then record its date and who handles it. Leave months blank when you have nothing verified to add.\n\nThe free 12-month calendar lets you type short notes or print a blank copy. No signup required. Entries are not saved or submitted; print or save your own PDF before leaving.\n\nOpen homeroutineguide.com → Free Checklists → Free print-at-home worksheets → Home Maintenance Calendar Printable.\n\n#NewHomeowner #HomeMaintenance #HomeOrganization",
+      "slides": [
+        {
+          "slug": "your-twelve-month-plan",
+          "title": "Free 12-Month Home Maintenance Calendar Printable",
+          "heading": [
+            "Stop remembering",
+            "every home task."
+          ],
+          "lines": [
+            "Choose any year",
+            "Add verified tasks + dates",
+            "Print blank or filled"
+          ],
+          "style": "months",
+          "target": "https://homeroutineguide.com/home-maintenance-calendar-printable.html#calendar-worksheet",
+          "description": "Print a free undated home maintenance calendar with all 12 months. Type short notes for verified tasks, due dates and who handles them, or print a blank copy. No signup required. Entries are not saved; print or save your own PDF before leaving.",
+          "slide": "1 / 3",
+          "alt": "Home Routine Guide: Stop remembering every home task. Choose any year; Add verified tasks + dates; Print blank or filled. Plan from your actual home and instructions."
+        },
+        {
+          "heading": [
+            "Start with",
+            "one verified task."
+          ],
+          "lines": [
+            "Read your equipment instructions",
+            "Add the due date + who",
+            "Record completed work in a log"
+          ],
+          "slide": "2 / 3",
+          "alt": "Home Routine Guide: Start with one verified task. Read your equipment instructions; Add the due date + who; Record completed work in a log. Plan from your actual home and instructions."
+        },
+        {
+          "heading": [
+            "Your next step:",
+            "print the calendar."
+          ],
+          "lines": [
+            "Open Home Routine Guide",
+            "Free Checklists → Free worksheets",
+            "Home Maintenance Calendar"
+          ],
+          "note": "Free to use. No signup. Entries are not saved.",
+          "slide": "3 / 3",
+          "alt": "Home Routine Guide: Your next step: print the calendar. Open Home Routine Guide; Free Checklists → Free worksheets; Home Maintenance Calendar. Free to use. No signup. Entries are not saved."
+        }
+      ],
+      "media": [
+        {
+          "file": "calendar-start-1.png",
+          "alt": "Home Routine Guide: Stop remembering every home task. Choose any year; Add verified tasks + dates; Print blank or filled. Plan from your actual home and instructions."
+        },
+        {
+          "file": "calendar-start-2.png",
+          "alt": "Home Routine Guide: Start with one verified task. Read your equipment instructions; Add the due date + who; Record completed work in a log. Plan from your actual home and instructions."
+        },
+        {
+          "file": "calendar-start-3.png",
+          "alt": "Home Routine Guide: Your next step: print the calendar. Open Home Routine Guide; Free Checklists → Free worksheets; Home Maintenance Calendar. Free to use. No signup. Entries are not saved."
+        }
+      ]
+    },
+    {
+      "slug": "october-planning",
+      "date": "2026-10-01T10:00:00-04:00",
+      "target": "https://homeroutineguide.com/home-maintenance-calendar-printable.html#calendar-worksheet",
+      "caption": "Your October home plan does not need every task on the internet.\n\nStart with the equipment you actually own, your climate and property conditions, and any qualified service that is due. ENERGY STAR recommends professional pre-season HVAC checkups; follow your equipment instructions and use qualified help for technical work.\n\nUse the fall checklist for prompts, then write verified tasks and dates in the free calendar. This is planning help, not a home inspection.\n\nOpen homeroutineguide.com → Free Checklists → Free print-at-home worksheets → Home Maintenance Calendar Printable.\n\n#FallHomeMaintenance #NewHomeowner #HomePlanning",
+      "slides": [
+        {
+          "heading": [
+            "October plan?",
+            "First verify",
+            "what applies."
+          ],
+          "lines": [
+            "Your equipment + instructions",
+            "Your climate + property",
+            "Who handles it + when"
+          ],
+          "note": "Free calendar at Home Routine Guide.",
+          "alt": "Home Routine Guide: October plan? First verify what applies. Your equipment + instructions; Your climate + property; Who handles it + when. Free calendar at Home Routine Guide."
+        }
+      ],
+      "media": [
+        {
+          "file": "october-planning-1.png",
+          "alt": "Home Routine Guide: October plan? First verify what applies. Your equipment + instructions; Your climate + property; Who handles it + when. Free calendar at Home Routine Guide."
+        }
+      ]
+    },
+    {
+      "slug": "free-calendar-or-binder",
+      "date": "2026-10-03T10:00:00-04:00",
+      "target": "https://homeroutineguide.com/packages.html",
+      "caption": "Start with the free calendar if an annual overview is all you need.\n\nIf you want guided pages for equipment, maintenance, repairs, contractors and budgets together, the New Homeowner Starter Binder is a 44-page digital download for a one-time $9.99. No physical binder is shipped.\n\nPreview it at homeroutineguide.com → Starter Binder. Checkout opens on Kit; review the digital-product terms before purchasing. The free calendar remains available without a purchase.\n\n#NewHomeowner #HomeOrganization #HomeMaintenance",
+      "slides": [
+        {
+          "tag": "FREE RESOURCE + OPTIONAL DIGITAL BINDER",
+          "heading": [
+            "Start free.",
+            "Add structure",
+            "when useful."
+          ],
+          "lines": [
+            "FREE: 12-month calendar",
+            "44-page Starter Binder: $9.99",
+            "Digital download · no physical binder"
+          ],
+          "note": "One-time purchase. Preview before deciding.",
+          "alt": "Home Routine Guide: Start free. Add structure when useful. FREE: 12-month calendar; 44-page Starter Binder: $9.99; Digital download · no physical binder. One-time purchase. Preview before deciding."
+        }
+      ],
+      "media": [
+        {
+          "file": "free-calendar-or-binder-1.png",
+          "alt": "Home Routine Guide: Start free. Add structure when useful. FREE: 12-month calendar; 44-page Starter Binder: $9.99; Digital download · no physical binder. One-time purchase. Preview before deciding."
+        }
+      ]
+    }
+  ]
+}
