@@ -1,0 +1,43 @@
+/* Scoped to the free calendar; other article and worksheet print layouts stay independent. */
+.calendar-sheet { margin: 32px 0; padding: 28px; border: 2px solid var(--forest); border-radius: 18px; background: white; }
+.calendar-sheet .calendar-heading { margin: 0 0 12px; padding: 0; font-size: 2rem; }
+.calendar-sheet .calendar-intro { font-size: .94rem; margin: 0 0 18px; }
+.calendar-year { display: flex; align-items: center; gap: 12px; font-weight: 700; }
+.calendar-year input { width: 100px; padding: 8px; border: 1px solid #7b8c80; border-radius: 6px; font: inherit; }
+.calendar-months { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; margin: 20px 0; }
+.calendar-month { min-width: 0; margin: 0; padding: 12px; border: 1px solid #9caf9f; border-radius: 8px; }
+.calendar-month legend { padding: 0 6px; color: var(--forest); font-weight: 700; }
+.calendar-month label { display: block; font-size: .8rem; color: var(--ink); }
+.calendar-month textarea { display: block; width: 100%; min-height: 92px; margin-top: 6px; padding: 8px; border: 1px solid #9caf9f; border-radius: 4px; background: white; color: var(--ink); font: inherit; font-size: .9rem; line-height: 1.4; resize: vertical; }
+.calendar-sheet .calendar-footnote { margin: 12px 0 0; font-size: .82rem; }
+.calendar-print-brand { display: none; }
+.calendar-sheet .calendar-actions { margin: 18px 0 0; }
+.calendar-sheet input:focus-visible, .calendar-sheet textarea:focus-visible { outline: 3px solid var(--forest); outline-offset: 3px; }
+@media (max-width: 640px) {
+  .calendar-sheet { padding: 18px; }
+  .calendar-months { grid-template-columns: 1fr; }
+}
+@media print {
+  @page { size: A4 portrait; margin: 12mm; }
+  body.calendar-page * { visibility: visible !important; }
+  body.calendar-page > :not(main),
+  body.calendar-page main > :not(.article-section),
+  body.calendar-page .article-body > :not(.calendar-sheet),
+  body.calendar-page .calendar-screen-only { display: none !important; }
+  body.calendar-page, body.calendar-page main, body.calendar-page .article-section, body.calendar-page .article-body {
+    margin: 0; padding: 0; width: 100%; max-width: none; background: white; color: #000;
+  }
+  .calendar-sheet { margin: 0; padding: 0; border: 0; border-radius: 0; font-size: 10pt; }
+  .calendar-sheet .calendar-heading { font-size: 19pt; margin-bottom: 5px; }
+  .calendar-sheet .calendar-intro { font-size: 9pt; margin-bottom: 8px; }
+  .calendar-year { font-size: 10pt; }
+  .calendar-year input { padding: 2px 6px; }
+  .calendar-months { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 7px 12px; margin: 10px 0; }
+  .calendar-month { padding: 4px 7px 7px; break-inside: avoid; border-color: #666; }
+  .calendar-month legend { color: #000; font-size: 10pt; }
+  .calendar-month label { font-size: 8pt; color: #000; }
+  .calendar-month textarea { min-height: 0; height: 65px; margin-top: 3px; padding: 3px; border-color: #777; font-size: 9pt; line-height: 14px; resize: none; overflow: visible; }
+  .calendar-sheet .calendar-footnote { font-size: 8pt; margin-top: 6px; }
+  .calendar-print-brand { display: block; font-weight: 700; margin-top: 8px; font-size: 9pt; }
+  .calendar-sheet input:focus-visible, .calendar-sheet textarea:focus-visible { outline: none; }
+}

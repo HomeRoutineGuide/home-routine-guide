@@ -1,0 +1,66 @@
+// Original vector artwork; sharp only rasterizes the repository-native designs.
+const fs = require('fs');
+const path = require('path');
+const sharp = require('sharp');
+const root = path.resolve(__dirname, '..');
+const date = '2026-09-27';
+const base = 'https://homeroutineguide.com/';
+const calendar = base + 'home-maintenance-calendar-printable.html#calendar-worksheet';
+const sources = ['https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist', 'https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Carbon-Monoxide-Information-Center/CO-Alarms'];
+const pins = [
+  {slug:'your-twelve-month-plan',title:'Free 12-Month Home Maintenance Calendar Printable',heading:['12 months.','Your home.','Your plan.'],lines:['Choose any year','Add verified tasks + dates','Print blank or filled'],style:'months',target:calendar,description:'Print a free undated home maintenance calendar with all 12 months. Type short notes for verified tasks, due dates and who handles them, or print a blank copy. No signup required. Entries are not saved; print or save your own PDF before leaving.'},
+  {slug:'one-verified-task',title:'Start Your Home Maintenance Calendar With One Verified Task',heading:['One task.','One date.','A useful start.'],lines:['Read the actual instructions','Choose the due month','Name who handles it'],target:calendar,description:'Build a home maintenance plan around your actual equipment and property. Start with one task whose timing you can verify, then record the month and responsible person in the free calendar. It is an organizer, not a universal service schedule.'},
+  {slug:'fall-tasks-need-dates',title:'Put Your Fall Home Maintenance Plan on a Calendar',heading:['Fall tasks','need dates.'],lines:['Check what applies to your home','Confirm timing + qualified help','Add the verified plan'],target:calendar,description:'Use the fall guide for planning prompts, then add verified tasks to your free 12-month calendar. Equipment, climate and property conditions change the right schedule. The worksheet does not replace manufacturer instructions or qualified help.'},
+  {slug:'planned-versus-completed',title:'Home Maintenance Calendar vs Log: Keep Both Useful',heading:['Planned?','Completed?','Keep both clear.'],lines:['Calendar: task + due date + who','Log: work + actual date + result','Carry forward the next action'],target:base+'home-maintenance-log-printable.html#blank-log',description:'Use a calendar for planned work and a maintenance log for what actually happened. Print the free blank log to record completed work and next actions. Keep completed household records private.'},
+  {slug:'share-a-blank-calendar',title:'Share a Free Home Maintenance Calendar With a New Homeowner',heading:['New home?','Share a','starting point.'],lines:['Free undated calendar','No signup needed','Share the public link'],style:'months',target:base+'resources.html#free-worksheets',description:'Know someone settling into a home? Share the free maintenance calendar from Home Routine Guide. The resource library includes blank organization worksheets. Share public links, not private completed records; no partnership or paid-product redistribution rights are implied.'}
+];
+const esc = s => s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+function text(x,y,s,size=32,weight='normal',color='#17372f') {return `<text x="${x}" y="${y}" font-family="DejaVu Sans" font-size="${size}" font-weight="${weight}" fill="${color}">${esc(s)}</text>`;}
+function art(p,ig=false) {
+  const w=ig?1080:1000, h=ig?1350:1500;
+  const linesY=ig?560:620;
+  let body=text(65,104,p.tag||'FREE HOMEOWNER RESOURCE',24,'bold');
+  p.heading.forEach((s,i)=>body+=text(65,220+i*76,s,58,'bold'));
+  if(p.style==='months') {
+    ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'].forEach((m,i)=>{
+      const x=65+(i%4)*((w-130)/4),y=480+Math.floor(i/4)*100;
+      body+=`<rect x="${x}" y="${y}" width="${(w-160)/4}" height="84" rx="12" fill="#e2eadf"/>`+text(x+20,y+37,m,22,'bold')+`<path d="M${x+20} ${y+59}h${(w-300)/4}" stroke="#96aa99" stroke-width="2"/>`;
+    });
+    p.lines.forEach((s,i)=>body+=text(65,865+i*63,s,30,i===0?'bold':'normal'));
+  } else {
+    p.lines.forEach((s,i)=>body+=`<rect x="65" y="${linesY+i*128}" width="${w-130}" height="100" rx="14" fill="#e2eadf"/>`+text(88,linesY+61+i*128,s,28,'bold'));
+  }
+  body+=text(65,h-245,p.note||'Plan from your actual home and instructions.',23);
+  body+=`<path d="M65 ${h-195}H${w-65}" stroke="#bd9555" stroke-width="3"/>`;
+  body+=text(65,h-120,'HOME ROUTINE GUIDE',33,'bold')+text(65,h-62,'homeroutineguide.com',27);
+  if(p.slide)body+=text(w-140,104,p.slide,24,'bold');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><rect width="${w}" height="${h}" fill="#faf7ef"/><rect width="${w}" height="20" fill="#17372f"/>${body}</svg>`;
+}
+const posts=[
+  {slug:'calendar-start',date:'2026-09-29T10:00:00-04:00',target:calendar,caption:'A useful maintenance plan starts with your actual home.\n\nSwipe for a simple way to begin: choose a year, verify one task from the right instructions, then record its date and who handles it. Leave months blank when you have nothing verified to add.\n\nThe free 12-month calendar lets you type short notes or print a blank copy. No signup required. Entries are not saved or submitted; print or save your own PDF before leaving.\n\nOpen homeroutineguide.com → Free Checklists → Free print-at-home worksheets → Home Maintenance Calendar Printable.\n\n#NewHomeowner #HomeMaintenance #HomeOrganization',slides:[{...pins[0],heading:['Stop remembering','every home task.'],slide:'1 / 3'},{heading:['Start with','one verified task.'],lines:['Read your equipment instructions','Add the due date + who','Record completed work in a log'],slide:'2 / 3'},{heading:['Your next step:','print the calendar.'],lines:['Open Home Routine Guide','Free Checklists → Free worksheets','Home Maintenance Calendar'],note:'Free to use. No signup. Entries are not saved.',slide:'3 / 3'}]},
+  {slug:'october-planning',date:'2026-10-01T10:00:00-04:00',target:calendar,caption:'Your October home plan does not need every task on the internet.\n\nStart with the equipment you actually own, your climate and property conditions, and any qualified service that is due. ENERGY STAR recommends professional pre-season HVAC checkups; follow your equipment instructions and use qualified help for technical work.\n\nUse the fall checklist for prompts, then write verified tasks and dates in the free calendar. This is planning help, not a home inspection.\n\nOpen homeroutineguide.com → Free Checklists → Free print-at-home worksheets → Home Maintenance Calendar Printable.\n\n#FallHomeMaintenance #NewHomeowner #HomePlanning',slides:[{heading:['October plan?','First verify','what applies.'],lines:['Your equipment + instructions','Your climate + property','Who handles it + when'],note:'Free calendar at Home Routine Guide.'}]},
+  {slug:'free-calendar-or-binder',date:'2026-10-03T10:00:00-04:00',target:base+'packages.html',caption:'Start with the free calendar if an annual overview is all you need.\n\nIf you want guided pages for equipment, maintenance, repairs, contractors and budgets together, the New Homeowner Starter Binder is a 44-page digital download for a one-time $9.99. No physical binder is shipped.\n\nPreview it at homeroutineguide.com → Starter Binder. Checkout opens on Kit; review the digital-product terms before purchasing. The free calendar remains available without a purchase.\n\n#NewHomeowner #HomeOrganization #HomeMaintenance',slides:[{tag:'FREE RESOURCE + OPTIONAL DIGITAL BINDER',heading:['Start free.','Add structure','when useful.'],lines:['FREE: 12-month calendar','44-page Starter Binder: $9.99','Digital download · no physical binder'],note:'One-time purchase. Preview before deciding.'}]}
+];
+async function save(dir,name,p,ig) {const svg=art(p,ig);fs.writeFileSync(path.join(dir,name+'.svg'),svg);await sharp(Buffer.from(svg)).png().toFile(path.join(dir,name+'.png'));}
+(async()=>{
+  let preview = text(65,80,'FREE PRINTABLE RESOURCE',24,'bold');
+  ['Free home','maintenance','calendar'].forEach((line,i)=>preview+=text(65,190+i*76,line,59,'bold'));
+  preview += text(65,423,'12 months · any year · no signup',25);
+  ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'].forEach((month,i)=>{
+    const x=735+(i%2)*190,y=95+Math.floor(i/2)*62;
+    preview+=`<rect x="${x}" y="${y}" width="175" height="50" rx="8" fill="#e2eadf"/>`+text(x+15,y+33,month,22,'bold');
+  });
+  preview += '<path d="M65 500H1135" stroke="#bd9555" stroke-width="3"/>';
+  preview += text(65,568,'HOME ROUTINE GUIDE',30,'bold')+text(745,568,'homeroutineguide.com',25);
+  const previewSvg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#faf7ef"/>${preview}</svg>`;
+  fs.writeFileSync(path.join(root,'maintenance-calendar-social.svg'),previewSvg);
+  await sharp(Buffer.from(previewSvg)).png().toFile(path.join(root,'maintenance-calendar-social.png'));
+  const pd=path.join(root,'pinterest',date),sd=path.join(root,'social',date);fs.mkdirSync(pd,{recursive:true});fs.mkdirSync(sd,{recursive:true});
+  for(const p of pins){p.alt='Home Routine Guide: '+p.heading.join(' ')+' '+p.lines.join('; ')+'.';p.imageBrief='1000×1500. Cream #faf7ef background, forest #17372f type, muted green cards and gold divider. Headline: '+p.heading.join(' / ')+'. '+(p.style==='months'?'Twelve labeled month tiles in a 4×3 grid, followed by: ':'Three stacked labeled cards: ')+p.lines.join(' / ')+'. 65px safe margins. Brand and homeroutineguide.com footer. Original vector design; no photographs, mockups, personal information or invented results.';await save(pd,p.slug,p,false);}
+  for(const p of posts){p.media=[];for(let i=0;i<p.slides.length;i++){const s=p.slides[i],name=p.slug+'-'+(i+1);s.alt='Home Routine Guide: '+s.heading.join(' ')+' '+s.lines.join('; ')+'. '+(s.note||'Plan from your actual home and instructions.');await save(sd,name,s,true);p.media.push({file:name+'.png',alt:s.alt});}}
+  const meta={preparedOn:date,artwork:'Original code-native vector artwork; no AI-generated imagery',sources};
+  fs.writeFileSync(path.join(pd,'campaign.json'),JSON.stringify({...meta,status:'Prepared, not published or scheduled',pins},null,2)+'\n');
+  fs.writeFileSync(path.join(pd,'README.md'),'# Free-calendar Pinterest package\n\nFive fresh 1000×1500 designs. Prepared only; publication requires a verified connected Home Routine Guide Pinterest account.\n\n'+pins.map(p=>`## ${p.title}\n\n![${p.alt}](${p.slug}.png)\n\n${p.description}\n\nTarget: ${p.target}\n\nAlt: ${p.alt}\n\nImage brief: ${p.imageBrief}\n`).join('\n')+'\nPrimary sources reviewed September 27, 2026:\n'+sources.map(s=>'- '+s).join('\n')+'\n');
+  fs.writeFileSync(path.join(sd,'campaign.json'),JSON.stringify({...meta,status:'Prepared; verify publication or queue separately in Metricool',posts},null,2)+'\n');
+  fs.writeFileSync(path.join(sd,'README.md'),'# Free-calendar Instagram campaign\n\nThree distinct feed posts for the existing Home Routine Guide profile; 1080×1350 art. One carousel, two single-image posts. At most one product promotion. Dates below are intended until Metricool confirms them.\n\n'+posts.map(p=>`## ${p.date}\n\n${p.media.map(m=>`![${m.alt}](${m.file})`).join('\n\n')}\n\n${p.caption}\n\nDestination: ${p.target}\n`).join('\n')+'\n## No-spend resource-sharing copy\n\nPlanning your first year in a home? Print the free undated Home Routine Guide maintenance calendar: '+calendar+'. Use your own equipment instructions and local conditions to choose tasks and dates. No purchase or signup is required. Share the public link rather than completed private records.\n\nPrepared for welcome notes or a resource list. No outreach or submissions sent; no partnership, endorsement or paid-product redistribution rights implied.\n\nSources: '+sources.join(' ; ')+'\n');
+})();
