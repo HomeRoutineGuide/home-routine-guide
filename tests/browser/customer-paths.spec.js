@@ -97,7 +97,9 @@ for (const width of [1280, 390]) {
     await page.getByLabel('Year', {exact:true}).fill('2026');
     await page.getByLabel('January tasks, due dates and who', {exact:true}).fill('Example only: read equipment manual / Jan 15 / owner');
     await page.getByLabel('December tasks, due dates and who', {exact:true}).fill('Example only: review next-year dates / Dec 15 / owner');
-    await page.locator('#calendar-worksheet').screenshot({path:testInfo.outputPath(`calendar-${width}.png`)});
+    await page.locator('#calendar-year').focus();
+    await page.evaluate(() => window.scrollTo({top:document.querySelector('#calendar-worksheet').getBoundingClientRect().top + window.scrollY - 100,behavior:'instant'}));
+    await page.screenshot({path:testInfo.outputPath(`calendar-${width}.png`)});
     await page.evaluate(() => { window.print = () => { window.calendarPrintCalled = true; }; });
     const print = page.getByRole('button', {name:'Print or save calendar'});
     await print.focus();

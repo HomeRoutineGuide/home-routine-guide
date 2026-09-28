@@ -43,6 +43,18 @@ const posts=[
 ];
 async function save(dir,name,p,ig) {const svg=art(p,ig);fs.writeFileSync(path.join(dir,name+'.svg'),svg);await sharp(Buffer.from(svg)).png().toFile(path.join(dir,name+'.png'));}
 (async()=>{
+  let preview = text(65,80,'FREE PRINTABLE RESOURCE',24,'bold');
+  ['Free home','maintenance','calendar'].forEach((line,i)=>preview+=text(65,190+i*76,line,59,'bold'));
+  preview += text(65,423,'12 months · any year · no signup',25);
+  ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'].forEach((month,i)=>{
+    const x=735+(i%2)*190,y=95+Math.floor(i/2)*62;
+    preview+=`<rect x="${x}" y="${y}" width="175" height="50" rx="8" fill="#e2eadf"/>`+text(x+15,y+33,month,22,'bold');
+  });
+  preview += '<path d="M65 500H1135" stroke="#bd9555" stroke-width="3"/>';
+  preview += text(65,568,'HOME ROUTINE GUIDE',30,'bold')+text(745,568,'homeroutineguide.com',25);
+  const previewSvg=`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630"><rect width="1200" height="630" fill="#faf7ef"/>${preview}</svg>`;
+  fs.writeFileSync(path.join(root,'maintenance-calendar-social.svg'),previewSvg);
+  await sharp(Buffer.from(previewSvg)).png().toFile(path.join(root,'maintenance-calendar-social.png'));
   const pd=path.join(root,'pinterest',date),sd=path.join(root,'social',date);fs.mkdirSync(pd,{recursive:true});fs.mkdirSync(sd,{recursive:true});
   for(const p of pins){p.alt='Home Routine Guide: '+p.heading.join(' ')+' '+p.lines.join('; ')+'.';p.imageBrief='1000×1500. Cream #faf7ef background, forest #17372f type, muted green cards and gold divider. Headline: '+p.heading.join(' / ')+'. '+(p.style==='months'?'Twelve labeled month tiles in a 4×3 grid, followed by: ':'Three stacked labeled cards: ')+p.lines.join(' / ')+'. 65px safe margins. Brand and homeroutineguide.com footer. Original vector design; no photographs, mockups, personal information or invented results.';await save(pd,p.slug,p,false);}
   for(const p of posts){p.media=[];for(let i=0;i<p.slides.length;i++){const s=p.slides[i],name=p.slug+'-'+(i+1);s.alt='Home Routine Guide: '+s.heading.join(' ')+' '+s.lines.join('; ')+'. '+(s.note||'Plan from your actual home and instructions.');await save(sd,name,s,true);p.media.push({file:name+'.png',alt:s.alt});}}

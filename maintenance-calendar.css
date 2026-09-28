@@ -39,4 +39,5 @@
   .calendar-month textarea { min-height: 0; height: 65px; margin-top: 3px; padding: 3px; border-color: #777; font-size: 9pt; line-height: 14px; resize: none; overflow: visible; }
   .calendar-sheet .calendar-footnote { font-size: 8pt; margin-top: 6px; }
   .calendar-print-brand { display: block; font-weight: 700; margin-top: 8px; font-size: 9pt; }
+  .calendar-sheet input:focus-visible, .calendar-sheet textarea:focus-visible { outline: none; }
 }
