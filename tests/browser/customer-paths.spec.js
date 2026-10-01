@@ -87,6 +87,13 @@ for (const width of [1280, 390]) {
     await page.setViewportSize({width, height:900});
     const errors = [];
     page.on('pageerror', error => errors.push(error.message));
+    await page.goto('/');
+    await page.evaluate(() => document.fonts.ready);
+    await checkHorizontalFit(page);
+    await page.screenshot({path:testInfo.outputPath(`calendar-entry-${width}.png`)});
+    await page.getByRole('link', {name:'Print the free calendar', exact:true}).click();
+    await expect(page).toHaveURL(/home-maintenance-calendar-printable\.html#calendar-worksheet$/);
+    await expect(page.locator('#calendar-title')).toBeInViewport();
     await page.goto('/resources.html#free-worksheets');
     await page.getByRole('link', {name:'Open the free maintenance calendar →'}).click();
     await expect(page).toHaveURL(/home-maintenance-calendar-printable\.html#calendar-worksheet$/);
