@@ -131,3 +131,35 @@ for (const width of [1280, 390]) {
     await expect(page.locator('#calendar-january')).toHaveValue('');
   });
 }
+
+for (const width of [1280, 390]) {
+  test(`free warranty sheet discovery and print at ${width}px`, async ({page}, testInfo) => {
+    await page.setViewportSize({width,height:900});
+    const errors=[];
+    page.on('pageerror',error=>errors.push(error.message));
+    await page.goto('/resources.html');
+    const entry=page.getByRole('link',{name:'Print the free warranty tracker →',exact:true});
+    await entry.focus();
+    await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(/home-warranty-tracker-printable\.html#warranty-worksheet$/);
+    await page.evaluate(()=>document.fonts.ready);
+    await expect(page.locator('#warranty-sheet-title')).toBeInViewport();
+    await checkHorizontalFit(page);
+    await expect(page.locator('.warranty-field')).toHaveCount(12);
+    await page.locator('.warranty-sheet').screenshot({path:testInfo.outputPath(`warranty-${width}.png`)});
+    await page.evaluate(()=>{window.print=()=>{window.warrantyPrintCalled=true;};});
+    const print=page.getByRole('button',{name:'Print blank warranty tracker'});
+    await print.focus();
+    await page.keyboard.press('Enter');
+    expect(await page.evaluate(()=>window.warrantyPrintCalled)).toBe(true);
+    if(width===1280){
+      await page.emulateMedia({media:'print'});
+      await expect(print).toBeHidden();
+      await expect(page.locator('.site-header')).toBeHidden();
+      for(const format of ['A4','Letter']){
+        await page.pdf({path:testInfo.outputPath(`warranty-${format}.pdf`),format,printBackground:true});
+      }
+    }
+    expect(errors).toEqual([]);
+  });
+}

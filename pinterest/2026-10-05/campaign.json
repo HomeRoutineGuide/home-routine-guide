@@ -1,0 +1,92 @@
+{
+  "status": "Prepared; not published or scheduled",
+  "reviewed": "2026-10-05",
+  "pins": [
+    {
+      "slug": "receipt-meets-warranty",
+      "title": "Keep the Receipt With the Warranty",
+      "heading": [
+        "The receipt.",
+        "The written terms.",
+        "One place."
+      ],
+      "lines": [
+        "Choose one appliance",
+        "Find both documents",
+        "Record their file locations"
+      ],
+      "description": "Start one useful home record: keep an appliance receipt with its written warranty, then use the free blank tracker to find both later. No signup required. The tracker organizes evidence; it does not confirm coverage.",
+      "target": "https://homeroutineguide.com/home-warranty-tracker-printable.html#warranty-worksheet",
+      "alt": "Home Routine Guide: The receipt. The written terms. One place. Choose one appliance; Find both documents; Record their file locations. Organize records; verify the actual terms.",
+      "imageBrief": "1000 by 1500 pixels. Cream #f8f3e9 and forest #17372f, gold #d2a85f accent. Top label FREE HOME RECORD RESOURCE. Large left-aligned headline: The receipt. The written terms. One place. Three separate white instruction cards: Choose one appliance / Find both documents / Record their file locations. Small outline document icon. Footer Home Routine Guide and homeroutineguide.com. No personal data, completed records, endorsements or warranty guarantees."
+    },
+    {
+      "slug": "more-than-five-years",
+      "title": "A Five-Year Label Is Not the Whole Warranty",
+      "heading": [
+        "More than",
+        "“5 years.”"
+      ],
+      "lines": [
+        "Check what is covered",
+        "Record dates from the terms",
+        "Keep the original document"
+      ],
+      "description": "A short warranty label does not explain every condition. Record dates and any parts or labor differences from the actual written terms. Print a free blank one-item warranty tracker; no purchase required.",
+      "target": "https://homeroutineguide.com/home-warranty-tracker-printable.html#fields",
+      "alt": "Home Routine Guide: More than “5 years.” Check what is covered; Record dates from the terms; Keep the original document. Organize records; verify the actual terms.",
+      "imageBrief": "1000 by 1500 pixels. Cream #f8f3e9 and forest #17372f, gold #d2a85f accent. Top label FREE HOME RECORD RESOURCE. Large left-aligned headline: More than “5 years.” Three separate white instruction cards: Check what is covered / Record dates from the terms / Keep the original document. Small outline document icon. Footer Home Routine Guide and homeroutineguide.com. No personal data, completed records, endorsements or warranty guarantees."
+    },
+    {
+      "slug": "unknown-is-useful",
+      "title": "Missing an Appliance Receipt? Mark It Unknown",
+      "heading": [
+        "Missing a detail?",
+        "Mark it unknown."
+      ],
+      "lines": [
+        "Start with what you can verify",
+        "List the missing document",
+        "Write one follow-up action"
+      ],
+      "description": "You can start organizing home maintenance records before every document is found. Mark missing dates or receipts as unknown and record a follow-up. Do not guess warranty coverage.",
+      "target": "https://homeroutineguide.com/home-maintenance-records-to-keep.html#records-checklist",
+      "alt": "Home Routine Guide: Missing a detail? Mark it unknown. Start with what you can verify; List the missing document; Write one follow-up action. Organize records; verify the actual terms.",
+      "imageBrief": "1000 by 1500 pixels. Cream #f8f3e9 and forest #17372f, gold #d2a85f accent. Top label FREE HOME RECORD RESOURCE. Large left-aligned headline: Missing a detail? Mark it unknown. Three separate white instruction cards: Start with what you can verify / List the missing document / Write one follow-up action. Small outline document icon. Footer Home Routine Guide and homeroutineguide.com. No personal data, completed records, endorsements or warranty guarantees."
+    },
+    {
+      "slug": "one-item-record",
+      "title": "Free One-Item Home Warranty Worksheet",
+      "heading": [
+        "One item.",
+        "One blank sheet."
+      ],
+      "lines": [
+        "Receipt and written terms",
+        "Dates and claim contact",
+        "Next action and follow-up"
+      ],
+      "description": "Print a blank warranty record for one appliance or agreement, then fill it by hand. No signup, purchase or software required. Keep completed household records private; this is not a coverage decision or automatic reminder.",
+      "target": "https://homeroutineguide.com/home-warranty-tracker-printable.html#warranty-worksheet",
+      "alt": "Home Routine Guide: One item. One blank sheet. Receipt and written terms; Dates and claim contact; Next action and follow-up. Organize records; verify the actual terms.",
+      "imageBrief": "1000 by 1500 pixels. Cream #f8f3e9 and forest #17372f, gold #d2a85f accent. Top label FREE HOME RECORD RESOURCE. Large left-aligned headline: One item. One blank sheet. Three separate white instruction cards: Receipt and written terms / Dates and claim contact / Next action and follow-up. Small outline document icon. Footer Home Routine Guide and homeroutineguide.com. No personal data, completed records, endorsements or warranty guarantees."
+    },
+    {
+      "slug": "share-the-link",
+      "title": "A Free Warranty Worksheet to Share With New Homeowners",
+      "heading": [
+        "Welcome them",
+        "with a useful link."
+      ],
+      "lines": [
+        "Share the blank worksheet",
+        "Keep filled records private",
+        "No signup required"
+      ],
+      "description": "Add this free public warranty-tracker link to a homeowner welcome note or resource list. Share the original link, not completed records. No affiliation or paid-Binder redistribution permission is implied.",
+      "target": "https://homeroutineguide.com/home-warranty-tracker-printable.html#warranty-worksheet",
+      "alt": "Home Routine Guide: Welcome them with a useful link. Share the blank worksheet; Keep filled records private; No signup required. Organize records; verify the actual terms.",
+      "imageBrief": "1000 by 1500 pixels. Cream #f8f3e9 and forest #17372f, gold #d2a85f accent. Top label FREE HOME RECORD RESOURCE. Large left-aligned headline: Welcome them with a useful link. Three separate white instruction cards: Share the blank worksheet / Keep filled records private / No signup required. Small outline document icon. Footer Home Routine Guide and homeroutineguide.com. No personal data, completed records, endorsements or warranty guarantees."
+    }
+  ]
+}
