@@ -1,0 +1,32 @@
+/* The blank warranty worksheet prints independently from the surrounding guide. */
+.warranty-sheet { border: 2px solid var(--forest); border-radius: 16px; padding: 28px; margin: 32px 0; background: white; }
+.warranty-sheet h2 { margin: 0 0 12px; }
+.warranty-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.warranty-field { min-width: 0; border: 1px solid #7b8c80; border-radius: 8px; padding: 12px; }
+.warranty-sheet .warranty-field h3 { margin: 0; font-size: 1rem; line-height: 1.45; }
+.writing-space { height: 58px; }
+.warranty-sheet .warranty-note { font-size: .9rem; }
+.warranty-brand { font-weight: 700; font-size: .85rem; }
+@media (max-width: 640px) {
+  .warranty-sheet { padding: 18px; }
+  .warranty-fields { grid-template-columns: 1fr; }
+}
+@media print {
+  @page { margin: 12mm; }
+  body.warranty-page * { visibility: visible !important; }
+  body.warranty-page > :not(main),
+  body.warranty-page main > :not(.article-section),
+  body.warranty-page .article-body > :not(.warranty-sheet),
+  body.warranty-page .warranty-screen-only { display: none !important; }
+  body.warranty-page, body.warranty-page main, body.warranty-page .article-section, body.warranty-page .article-body {
+    margin: 0; padding: 0; width: 100%; max-width: none; background: white; color: #000;
+  }
+  .warranty-sheet { border: 0; margin: 0; padding: 0; }
+  .warranty-sheet h2 { font-size: 19pt; margin: 0 0 5px; }
+  .warranty-sheet .warranty-intro { font-size: 9pt; margin: 0 0 10px; }
+  .warranty-fields { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+  .warranty-field { padding: 8px; border-color: #666; break-inside: avoid; }
+  .warranty-sheet .warranty-field h3 { color: #000; font-size: 9pt; line-height: 1.3; }
+  .writing-space { height: 58px; }
+  .warranty-sheet .warranty-note, .warranty-brand { font-size: 8pt; margin: 10px 0 0; }
+}
