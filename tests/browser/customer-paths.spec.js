@@ -163,3 +163,25 @@ for (const width of [1280, 390]) {
     expect(errors).toEqual([]);
   });
 }
+
+for (const width of [1280,390]) {
+  test(`water shutoff guide discovery and record at ${width}px`, async ({page},testInfo)=>{
+    await page.setViewportSize({width,height:900});
+    const errors=[];page.on('pageerror',e=>errors.push(e.message));
+    await page.goto('/resources.html');
+    const entry=page.getByRole('link',{name:'Find and document the shutoff →',exact:true});
+    await entry.focus();await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(/where-is-main-water-shutoff\.html$/);
+    await page.getByRole('link',{name:'Make your free shutoff record',exact:true}).click();
+    await expect(page).toHaveURL(/#record$/);
+    await page.evaluate(()=>document.fonts.ready);
+    await checkHorizontalFit(page);
+    await expect(page.locator('#handoff + p + ol > li')).toHaveCount(5);
+    await page.locator('#handoff').scrollIntoViewIfNeeded();
+    await page.screenshot({path:testInfo.outputPath(`shutoff-${width}.png`)});
+    await page.getByRole('link',{name:'44-page Starter Binder',exact:true}).click();
+    await expect(page).toHaveURL(/packages\.html#preview$/);
+    await expect(page.locator('#preview')).toBeVisible();
+    expect(errors).toEqual([]);
+  });
+}
