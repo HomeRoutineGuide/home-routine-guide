@@ -1,0 +1,91 @@
+{
+  "status": "Prepared; not published or scheduled",
+  "reviewed": "2026-10-19",
+  "pins": [
+    {
+      "slug": "check-versus-change",
+      "title": "Check Monthly Does Not Mean Replace Every Month",
+      "heading": [
+        "Check it.",
+        "Then decide."
+      ],
+      "lines": [
+        "Inspect monthly",
+        "Follow the filter instructions",
+        "Record the action and date"
+      ],
+      "description": "Start a repeatable HVAC filter routine. Check monthly, especially during heavy use, and follow the equipment and filter instructions for cleaning or replacement. Use the free six-point record to keep the details together.",
+      "target": "https://homeroutineguide.com/how-often-change-hvac-filter.html",
+      "alt": "Home Routine Guide: Check it. Then decide. Inspect monthly; Follow the filter instructions; Record the action and date.",
+      "imageBrief": "1000 by 1500 pixels. Forest green #17372f, cream #f8f3e9, gold #d2a85f. Large headline: Check it. Then decide. Three white cards: Inspect monthly / Follow the filter instructions / Record the action and date. Small record icon, generous margins, Home Routine Guide and homeroutineguide.com footer. No equipment-operation diagram, health claim or personal details."
+    },
+    {
+      "slug": "six-filter-details",
+      "title": "Six Details to Keep in Your HVAC Filter Record",
+      "heading": [
+        "One filter.",
+        "Six useful notes."
+      ],
+      "lines": [
+        "Size, location and specification",
+        "Instructions and actual action",
+        "Next check and follow-up"
+      ],
+      "description": "Copy the free six-point filter record into a private note: system, correct filter, compatible rating, instructions, actual action and next check. No signup or purchase is required.",
+      "target": "https://homeroutineguide.com/how-often-change-hvac-filter.html#filter-record",
+      "alt": "Home Routine Guide: One filter. Six useful notes. Size, location and specification; Instructions and actual action; Next check and follow-up.",
+      "imageBrief": "1000 by 1500 pixels. Forest green #17372f, cream #f8f3e9, gold #d2a85f. Large headline: One filter. Six useful notes. Three white cards: Size, location and specification / Instructions and actual action / Next check and follow-up. Small record icon, generous margins, Home Routine Guide and homeroutineguide.com footer. No equipment-operation diagram, health claim or personal details."
+    },
+    {
+      "slug": "rating-is-not-fit",
+      "title": "A Higher MERV Rating Is Not a Fit Guarantee",
+      "heading": [
+        "A rating is not",
+        "a fit guarantee."
+      ],
+      "lines": [
+        "Check equipment compatibility",
+        "Use the manual or technician",
+        "Do not choose by rating alone"
+      ],
+      "description": "Before changing filter efficiency, confirm what your HVAC system can accommodate. The guide links EPA guidance and explains what to document without guessing from the old filter.",
+      "target": "https://homeroutineguide.com/how-often-change-hvac-filter.html#size",
+      "alt": "Home Routine Guide: A rating is not a fit guarantee. Check equipment compatibility; Use the manual or technician; Do not choose by rating alone.",
+      "imageBrief": "1000 by 1500 pixels. Forest green #17372f, cream #f8f3e9, gold #d2a85f. Large headline: A rating is not a fit guarantee. Three white cards: Check equipment compatibility / Use the manual or technician / Do not choose by rating alone. Small record icon, generous margins, Home Routine Guide and homeroutineguide.com footer. No equipment-operation diagram, health claim or personal details."
+    },
+    {
+      "slug": "inspection-date",
+      "title": "Last Checked or Last Replaced? Keep Both Filter Dates",
+      "heading": [
+        "Checked today?",
+        "Say what changed."
+      ],
+      "lines": [
+        "Inspection is one action",
+        "Replacement is another",
+        "Record the next check too"
+      ],
+      "description": "A date alone does not tell the next person whether the filter was inspected, cleaned as instructed, or replaced. Keep the action with the date using the free filter-record prompts.",
+      "target": "https://homeroutineguide.com/how-often-change-hvac-filter.html#filter-record",
+      "alt": "Home Routine Guide: Checked today? Say what changed. Inspection is one action; Replacement is another; Record the next check too.",
+      "imageBrief": "1000 by 1500 pixels. Forest green #17372f, cream #f8f3e9, gold #d2a85f. Large headline: Checked today? Say what changed. Three white cards: Inspection is one action / Replacement is another / Record the next check too. Small record icon, generous margins, Home Routine Guide and homeroutineguide.com footer. No equipment-operation diagram, health claim or personal details."
+    },
+    {
+      "slug": "move-in-filter-note",
+      "title": "A Useful HVAC Filter Note for a New Homeowner",
+      "heading": [
+        "New home.",
+        "Know the filter."
+      ],
+      "lines": [
+        "Confirm each filter location",
+        "Keep the instruction reference",
+        "Make one record per system"
+      ],
+      "description": "Share a useful free filter-record link in a homeowner welcome note or resource list. Let the household confirm its own equipment details and keep completed records private.",
+      "target": "https://homeroutineguide.com/how-often-change-hvac-filter.html#filter-record",
+      "alt": "Home Routine Guide: New home. Know the filter. Confirm each filter location; Keep the instruction reference; Make one record per system.",
+      "imageBrief": "1000 by 1500 pixels. Forest green #17372f, cream #f8f3e9, gold #d2a85f. Large headline: New home. Know the filter. Three white cards: Confirm each filter location / Keep the instruction reference / Make one record per system. Small record icon, generous margins, Home Routine Guide and homeroutineguide.com footer. No equipment-operation diagram, health claim or personal details."
+    }
+  ]
+}

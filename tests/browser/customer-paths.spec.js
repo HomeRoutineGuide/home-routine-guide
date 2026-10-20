@@ -185,3 +185,23 @@ for (const width of [1280,390]) {
     expect(errors).toEqual([]);
   });
 }
+
+for (const width of [1280,390]) {
+  test(`filter record discovery and calendar path at ${width}px`, async ({page},testInfo)=>{
+    await page.setViewportSize({width,height:900});
+    const errors=[];page.on('pageerror',e=>errors.push(e.message));
+    await page.goto('/resources.html');
+    const entry=page.getByRole('link',{name:'Open the HVAC filter guide →',exact:true});
+    await entry.focus();await page.keyboard.press('Enter');
+    await page.getByRole('link',{name:'Use the free filter record',exact:true}).click();
+    await expect(page).toHaveURL(/how-often-change-hvac-filter\.html#filter-record$/);
+    await expect(page.locator('.filter-record-list > li')).toHaveCount(6);
+    await checkHorizontalFit(page);
+    await page.evaluate(()=>document.fonts.ready);
+    await page.screenshot({path:testInfo.outputPath(`filter-${width}.png`)});
+    await page.getByRole('link',{name:'free maintenance calendar',exact:true}).click();
+    await expect(page).toHaveURL(/home-maintenance-calendar-printable\.html#calendar-worksheet$/);
+    await expect(page.locator('#calendar-title')).toBeVisible();
+    expect(errors).toEqual([]);
+  });
+}
