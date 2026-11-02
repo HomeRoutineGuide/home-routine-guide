@@ -26,6 +26,7 @@ for (const viewport of [{width:1280,height:900}, {width:390,height:844}]) {
     const response = await page.goto('/resources.html');
     expect(response.status()).toBe(200);
     await page.evaluate(() => document.fonts.ready);
+    await page.screenshot({path:testInfo.outputPath(`resources-hero-${viewport.width}.png`)});
     // Exercise the keyboard route from the hero rather than a direct hash jump.
     const share = page.getByRole('link', {name:'Sharing resources with a new homeowner? Start here.'});
     await share.focus();

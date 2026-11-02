@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 root = Path(__file__).parent / 'test-results'
-allowed = {'product-1280.png', 'product-390.png', 'filter-1280.png', 'filter-390.png', 'shutoff-1280.png', 'shutoff-390.png', 'referral-1280.png', 'referral-390.png', 'referral-print.png',
+allowed = {'resources-hero-1280.png', 'resources-hero-390.png', 'product-1280.png', 'product-390.png', 'filter-1280.png', 'filter-390.png', 'shutoff-1280.png', 'shutoff-390.png', 'referral-1280.png', 'referral-390.png', 'referral-print.png',
            'resources-print.pdf', 'calendar-1280.png', 'calendar-390.png',
            'warranty-1280.png', 'warranty-390.png', 'warranty-A4.pdf', 'warranty-Letter.pdf',
            'calendar-print.pdf', 'calendar-entry-1280.png', 'calendar-entry-390.png'}
