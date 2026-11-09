@@ -206,3 +206,19 @@ for (const width of [1280,390]) {
     expect(errors).toEqual([]);
   });
 }
+
+for (const width of [1280,390]) {
+  test(`records guide worksheet choice at ${width}px`, async ({page},testInfo) => {
+    await page.setViewportSize({width,height:900});
+    await page.goto('/home-maintenance-records-to-keep.html#choose-record');
+    await page.evaluate(()=>document.fonts.ready);
+    await checkHorizontalFit(page);
+    const section=page.locator('section[aria-labelledby="choose-record"]');
+    await section.screenshot({path:testInfo.outputPath(`records-choice-${width}.png`)});
+    const link=section.getByRole('link',{name:'free appliance inventory',exact:true});
+    await link.focus(); await page.keyboard.press('Enter');
+    await expect(page).toHaveURL(/home-appliance-inventory-printable\.html#worksheet$/);
+    await expect(page.locator('#worksheet')).toBeVisible();
+    await checkHorizontalFit(page);
+  });
+}
