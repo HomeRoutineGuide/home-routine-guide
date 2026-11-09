@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "invoice-reference",
+    "title": "How to Connect a Home Repair Invoice to Your Maintenance Log",
+    "description": "Keep the original invoice securely, then use a free log to record the work and where its evidence is stored. No signup is required to print the blank log.",
+    "target": "https://homeroutineguide.com/home-maintenance-log-printable.html#blank-log",
+    "alt": "Home Routine Guide: Keep the invoice. Make it findable. Date and equipment. Actual work completed. Where the invoice is stored.",
+    "imageBrief": "1000-by-1500 portrait; cream background, forest-green brand header and type, gold divider; headline \u201cKeep the invoice. Make it findable.\u201d; three numbered white cards: Date and equipment; Actual work completed; Where the invoice is stored. Footer \u201cFREE HOME RECORDS\u201d and homeroutineguide.com. Native typography, no people, mockups or testimonials."
+  },
+  {
+    "slug": "receipt-pair",
+    "title": "Keep Appliance Receipts and Warranties Together",
+    "description": "Use a free warranty sheet to connect a receipt, written terms and claim instructions. The worksheet organizes records; it does not establish coverage.",
+    "target": "https://homeroutineguide.com/home-warranty-tracker-printable.html#warranty-worksheet",
+    "alt": "Home Routine Guide: A receipt needs its written terms. Receipt reference. Written warranty location. Verified claim contact.",
+    "imageBrief": "1000-by-1500 portrait; cream background, forest-green brand header and type, gold divider; headline \u201cA receipt needs its written terms.\u201d; three numbered white cards: Receipt reference; Written warranty location; Verified claim contact. Footer \u201cFREE HOME RECORDS\u201d and homeroutineguide.com. Native typography, no people, mockups or testimonials."
+  },
+  {
+    "slug": "manual-match",
+    "title": "Start Your Appliance Record With a Verified Model Number",
+    "description": "Record verified equipment details and the matching manual location on the free appliance inventory. Leave unknown details blank and keep completed records private.",
+    "target": "https://homeroutineguide.com/home-appliance-inventory-printable.html#worksheet",
+    "alt": "Home Routine Guide: Does this manual match your appliance? Equipment name. Verified model number. Matching manual location.",
+    "imageBrief": "1000-by-1500 portrait; cream background, forest-green brand header and type, gold divider; headline \u201cDoes this manual match your appliance?\u201d; three numbered white cards: Equipment name; Verified model number; Matching manual location. Footer \u201cFREE HOME RECORDS\u201d and homeroutineguide.com. Native typography, no people, mockups or testimonials."
+  },
+  {
+    "slug": "future-date",
+    "title": "Separate Future Maintenance Dates From Completed Work",
+    "description": "Use the calendar for verified future tasks and the log for completed work. Choose dates from your equipment instructions or provider, not a generic interval.",
+    "target": "https://homeroutineguide.com/home-maintenance-calendar-printable.html#calendar-worksheet",
+    "alt": "Home Routine Guide: A next date is not completed work. Plan the verified date. Record work after completion. Keep the supporting invoice.",
+    "imageBrief": "1000-by-1500 portrait; cream background, forest-green brand header and type, gold divider; headline \u201cA next date is not completed work.\u201d; three numbered white cards: Plan the verified date; Record work after completion; Keep the supporting invoice. Footer \u201cFREE HOME RECORDS\u201d and homeroutineguide.com. Native typography, no people, mockups or testimonials."
+  },
+  {
+    "slug": "welcome-link",
+    "title": "A Free Home Records Starting Point to Share After Closing",
+    "description": "Share the public Home Routine Guide records checklist with a new homeowner. They can choose a free sheet for an invoice, manual, warranty or future service date.",
+    "target": "https://homeroutineguide.com/home-maintenance-records-to-keep.html#choose-record",
+    "alt": "Home Routine Guide: Share the starting point. Keep records private. Share the public guide. Choose one verified document. Keep filled sheets private.",
+    "imageBrief": "1000-by-1500 portrait; cream background, forest-green brand header and type, gold divider; headline \u201cShare the starting point. Keep records private.\u201d; three numbered white cards: Share the public guide; Choose one verified document; Keep filled sheets private. Footer \u201cFREE HOME RECORDS\u201d and homeroutineguide.com. Native typography, no people, mockups or testimonials."
+  }
+]
