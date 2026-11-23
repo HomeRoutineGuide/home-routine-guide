@@ -222,3 +222,15 @@ for (const width of [1280,390]) {
     await checkHorizontalFit(page);
   });
 }
+
+test('fall guide links to a usable winter plan on mobile', async ({page}) => {
+  await page.setViewportSize({width:390,height:900});
+  await page.goto('/fall-home-maintenance-checklist.html');
+  await page.getByRole('link',{name:'winter outage planning checklist',exact:true}).click();
+  await expect(page).toHaveURL(/seasonal-maintenance\.html#winter-storm-prep$/);
+  await expect(page.getByRole('heading',{name:'Before a winter storm: make an outage plan'})).toBeVisible();
+  await expect(page.getByRole('heading',{name:'Alarms and fuel-burning equipment'})).toBeVisible();
+  await checkHorizontalFit(page);
+  await page.getByRole('link',{name:'free home emergency kit checklist',exact:true}).click();
+  await expect(page).toHaveURL(/home-emergency-kit-checklist\.html$/);
+});

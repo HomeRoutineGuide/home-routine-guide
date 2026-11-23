@@ -64,15 +64,15 @@ Image brief: 1000×1500 portrait; forest-green brand bar, cream canvas, headline
 
 ## Before the first storm
 
-![Before the first storm Where could you go?. Who needs a check-in?. What needs backup power?.](before-first-storm.png)
+![Before the first storm Where could you go? Who needs a check-in? What needs backup power?](before-first-storm.png)
 
 Description: Use a free planning checklist to decide where to go, who needs help and which essentials need backup.
 
 Target: https://homeroutineguide.com/seasonal-maintenance.html#winter-storm-prep
 
-Alt text: Before the first storm Where could you go?. Who needs a check-in?. What needs backup power?.
+Alt text: Before the first storm Where could you go? Who needs a check-in? What needs backup power?
 
-Image brief: 1000×1500 portrait; forest-green brand bar, cream canvas, headline “Before the first storm”, then three outlined cards: Where could you go?, Who needs a check-in?, What needs backup power?. Footer: Free homeowner resource and site address.
+Image brief: 1000×1500 portrait; forest-green brand bar, cream canvas, headline “Before the first storm”, then three outlined cards: Where could you go?, Who needs a check-in?, What needs backup power? Footer: Free homeowner resource and site address.
 
 
 
